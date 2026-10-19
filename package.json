@@ -1,0 +1,16 @@
+{
+  "name": "neocloud-payroll",
+  "version": "1.0.0",
+  "description": "Calculates, reconciles and visualizes one pay period of payroll, time and absence for NeoCloud.",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.18" },
+  "scripts": {
+    "build": "node --no-warnings scripts/build.mjs",
+    "dev": "node --no-warnings scripts/build.mjs && node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs",
+    "test": "node --test \"tests/*.test.ts\"",
+    "generate": "node scripts/generate-registers.ts",
+    "data": "python3 scripts/xlsx_to_csv.py \"source/Worker File dataset.xlsx\" data"
+  }
+}

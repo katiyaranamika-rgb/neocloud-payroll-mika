@@ -1,0 +1,104 @@
+country,companies,pay_code,description,type,debit_credit,account,account_name,segments
+US,NC-US,REG_SAL,Regular salary,Earning,DR,6100,Salaries - regular,"Department, location, class"
+US,NC-US,REG_HRS,Regular hours,Earning,DR,6100,Salaries - regular,"Department, location, class"
+US,NC-US,UNPD_LV,Unpaid leave dock,Earning,DR,6100,Salaries - regular,"Department, location, class"
+US,NC-US,RETRO_SAL,Retro salary,Earning,DR,6100,Salaries - regular,"Department, location, class"
+US,NC-US,RETRO_HRS,Retro hours,Earning,DR,6100,Salaries - regular,"Department, location, class"
+US,NC-US,OT_15,Overtime 1.5x,Earning,DR,6110,Overtime and double time,"Department, location, class"
+US,NC-US,DT_20,Double time 2x,Earning,DR,6110,Overtime and double time,"Department, location, class"
+US,NC-US,SVD_15,7th day first 8 hrs (CA),Earning,DR,6110,Overtime and double time,"Department, location, class"
+US,NC-US,SVD_20,7th day over 8 hrs (CA),Earning,DR,6110,Overtime and double time,"Department, location, class"
+US,NC-US,DIFF_NGT,Night differential,Earning,DR,6115,Shift and night differential,"Department, location, class"
+US,NC-US,DIFF_NGHT,NGHT shift differential,Earning,DR,6115,Shift and night differential,"Department, location, class"
+US,NC-US,DIFF_WKND,WKND shift differential,Earning,DR,6115,Shift and night differential,"Department, location, class"
+US,NC-US,MEAL_PEN,Meal period premium (CA),Earning,DR,6120,Meal period premiums,"Department, location, class"
+US,NC-US,VAC_HRS,Vacation hours,Earning,DR,6130,Paid time off,"Department, location, class"
+US,NC-US,SICK_HRS,Sick hours,Earning,DR,6130,Paid time off,"Department, location, class"
+US,NC-US,LEAVE_PAID,Paid leave (scheduled hours),Earning,DR,6130,Paid time off,"Department, location, class"
+US,NC-US,BON_SIGN,Sign-on bonus,Earning,DR,6140,Bonuses,"Department, location, class"
+US,NC-US,BON_SPOT,Spot bonus (discretionary),Earning,DR,6140,Bonuses,"Department, location, class"
+US,NC-US,VAC_PAYOUT,Vacation payout at termination,Earning,DR,2190,Accrued leave liability,Subsidiary only
+US,NC-US,HOL_STAT,Holiday pay,Earning,DR,6130,Paid time off,"Department, location, class"
+US,NC-US,401K_EE,401(k) deferral,Deduction,CR,2141,401(k) payable (employee + match),Subsidiary only
+US,NC-US,MED_EE,Medical,Deduction,CR,2142,Health benefits payable,Subsidiary only
+US,NC-US,DEN_EE,Dental,Deduction,CR,2142,Health benefits payable,Subsidiary only
+US,NC-US,VIS_EE,Vision,Deduction,CR,2142,Health benefits payable,Subsidiary only
+US,NC-US,BEN_ARR,Benefits arrears recovery,Deduction,CR,1250,Employee receivable - benefit arrears,Subsidiary only
+US,NC-US,BEN_ARR_NEW,Benefits arrears created (receivable),Memo (arrears),DR,1250,Employee receivable - benefit arrears,Subsidiary only
+US,NC-US,BEN_ARR_NEW,Benefits arrears created (receivable),Memo (arrears),CR,2142,Health benefits payable,Subsidiary only
+US,NC-US,GARN_CS,Child support,Deduction,CR,2150,Garnishments payable,Subsidiary only
+US,NC-US,GARN_CRED,Creditor garnishment,Deduction,CR,2150,Garnishments payable,Subsidiary only
+US,NC-US,FIT_EE,Federal income tax,Employee tax,CR,2110,Federal income tax withheld,Subsidiary only
+US,NC-US,SIT_CA,CA state income tax,Employee tax,CR,2115-CA,State income tax withheld - CA,Subsidiary only
+US,NC-US,SIT_NY,NY state income tax,Employee tax,CR,2115-NY,State income tax withheld - NY,Subsidiary only
+US,NC-US,SIT_MA,MA state income tax,Employee tax,CR,2115-MA,State income tax withheld - MA,Subsidiary only
+US,NC-US,SIT_IL,IL state income tax,Employee tax,CR,2115-IL,State income tax withheld - IL,Subsidiary only
+US,NC-US,SIT_GA,GA state income tax,Employee tax,CR,2115-GA,State income tax withheld - GA,Subsidiary only
+US,NC-US,SIT_CO,CO state income tax,Employee tax,CR,2115-CO,State income tax withheld - CO,Subsidiary only
+US,NC-US,SDI_CA,CA disability insurance,Employee tax,CR,2125,CA SDI withheld,Subsidiary only
+US,NC-US,OASDI_EE,Social Security employee,Employee tax,CR,2120,Employee FICA withheld,Subsidiary only
+US,NC-US,MEDI_EE,Medicare employee,Employee tax,CR,2120,Employee FICA withheld,Subsidiary only
+US,NC-US,OASDI_ER,Social Security employer,Employer cost,DR,6200,Employer social security and Medicare,"Department, location, class"
+US,NC-US,OASDI_ER,Social Security employer,Employer cost,CR,2130,Employer FICA payable,Subsidiary only
+US,NC-US,MEDI_ER,Medicare employer,Employer cost,DR,6200,Employer social security and Medicare,"Department, location, class"
+US,NC-US,MEDI_ER,Medicare employer,Employer cost,CR,2130,Employer FICA payable,Subsidiary only
+US,NC-US,FUTA_ER,Federal unemployment,Employer cost,DR,6210,Employer unemployment (FUTA/SUI),"Department, location, class"
+US,NC-US,FUTA_ER,Federal unemployment,Employer cost,CR,2131,FUTA payable,Subsidiary only
+US,NC-US,SUI_ER,State unemployment,Employer cost,DR,6210,Employer unemployment (FUTA/SUI),"Department, location, class"
+US,NC-US,SUI_ER,State unemployment,Employer cost,CR,2132,SUI payable,Subsidiary only
+US,NC-US,401K_ER,401(k) match,Employer cost,DR,6230,Employer 401(k) match,"Department, location, class"
+US,NC-US,401K_ER,401(k) match,Employer cost,CR,2141,401(k) payable (employee + match),Subsidiary only
+US,NC-US,BEN_ER,Employer benefits load,Employer cost,DR,6240,Employer benefits,"Department, location, class"
+US,NC-US,BEN_ER,Employer benefits load,Employer cost,CR,2143,Employer benefits accrued,Subsidiary only
+US,NC-US,NET_PAY,Net pay,Net pay,CR,2101,Net pay payable (bank),Subsidiary only
+US,NC-US,BANK_CLR,Net pay disbursed (bank file and checks),Settlement,DR,2101,Net pay payable (bank),Subsidiary only
+US,NC-US,BANK_CLR,Net pay disbursed (bank file and checks),Settlement,CR,1010,Operating cash,Subsidiary only
+US,NC-US,ACCR_WAGES,"Accrued wages (month end, auto-reverses)",Accrual,DR,6100,Salaries - regular,"Department, location, class"
+US,NC-US,ACCR_WAGES,"Accrued wages (month end, auto-reverses)",Accrual,CR,2105,Accrued wages,Subsidiary only
+US,NC-US,ACCR_LEAVE,Leave liability true-up,Accrual,DR,6130,Paid time off,"Department, location, class"
+US,NC-US,ACCR_LEAVE,Leave liability true-up,Accrual,CR,2190,Accrued leave liability,Subsidiary only
+UK,NC-UK,BASIC,Basic salary,Earning,DR,6100,Salaries - regular,"Department, location, class"
+UK,NC-UK,BONUS,Bonus,Earning,DR,6140,Bonuses,"Department, location, class"
+UK,NC-UK,HOL_PAYOUT,Holiday pay on termination,Earning,DR,2190,Accrued leave liability,Subsidiary only
+UK,NC-UK,PAYE,PAYE income tax,Employee tax,CR,2160,International statutory payable,Subsidiary only
+UK,NC-UK,EE_NI,Employee National Insurance,Employee tax,CR,2160,International statutory payable,Subsidiary only
+UK,NC-UK,EE_PENSION,Employee pension,Deduction,CR,2160,International statutory payable,Subsidiary only
+UK,NC-UK,NET_PAY,Net pay,Net pay,CR,2170,International provider clearing,Subsidiary only
+UK,NC-UK,ER_NI,Employer National Insurance,Employer cost,DR,6220,Employer social charges - international,"Department, location, class"
+UK,NC-UK,ER_NI,Employer National Insurance,Employer cost,CR,2160,International statutory payable,Subsidiary only
+UK,NC-UK,ER_BENEFITS,Employer-paid benefits (5% of gross; provider),Employer cost,DR,6240,Employer benefits,"Department, location, class"
+UK,NC-UK,ER_BENEFITS,Employer-paid benefits (5% of gross; provider),Employer cost,CR,2143,Employer benefits accrued,Subsidiary only
+UK,NC-UK,ACCR_LEAVE,Leave liability true-up,Accrual,DR,6130,Paid time off,"Department, location, class"
+UK,NC-UK,ACCR_LEAVE,Leave liability true-up,Accrual,CR,2190,Accrued leave liability,Subsidiary only
+UK,NC-UK,BANK_CLR,Provider funded (net pay),Settlement,DR,2170,International provider clearing,Subsidiary only
+UK,NC-UK,BANK_CLR,Provider funded (net pay),Settlement,CR,1010,Operating cash,Subsidiary only
+IN,NC-IN,BASIC,Basic and allowances,Earning,DR,6100,Salaries - regular,"Department, location, class"
+IN,NC-IN,BONUS,Bonus,Earning,DR,6140,Bonuses,"Department, location, class"
+IN,NC-IN,EL_ENCASH,Earned leave encashment,Earning,DR,2190,Accrued leave liability,Subsidiary only
+IN,NC-IN,TDS,Income tax (TDS),Employee tax,CR,2160,International statutory payable,Subsidiary only
+IN,NC-IN,EE_PF,Employee provident fund,Deduction,CR,2160,International statutory payable,Subsidiary only
+IN,NC-IN,NET_PAY,Net pay,Net pay,CR,2170,International provider clearing,Subsidiary only
+IN,NC-IN,ER_PF,Employer provident fund,Employer cost,DR,6220,Employer social charges - international,"Department, location, class"
+IN,NC-IN,ER_PF,Employer provident fund,Employer cost,CR,2160,International statutory payable,Subsidiary only
+IN,NC-IN,ER_BENEFITS,Employer-paid benefits (5% of gross; provider),Employer cost,DR,6240,Employer benefits,"Department, location, class"
+IN,NC-IN,ER_BENEFITS,Employer-paid benefits (5% of gross; provider),Employer cost,CR,2143,Employer benefits accrued,Subsidiary only
+IN,NC-IN,ACCR_LEAVE,Leave liability true-up,Accrual,DR,6130,Paid time off,"Department, location, class"
+IN,NC-IN,ACCR_LEAVE,Leave liability true-up,Accrual,CR,2190,Accrued leave liability,Subsidiary only
+IN,NC-IN,BANK_CLR,Provider funded (net pay),Settlement,DR,2170,International provider clearing,Subsidiary only
+IN,NC-IN,BANK_CLR,Provider funded (net pay),Settlement,CR,1010,Operating cash,Subsidiary only
+CA,NC-CA,BASIC,Base salary,Earning,DR,6100,Salaries - regular,"Department, location, class"
+CA,NC-CA,BONUS,Bonus,Earning,DR,6140,Bonuses,"Department, location, class"
+CA,NC-CA,VAC_PAY,Vacation pay on termination,Earning,DR,2190,Accrued leave liability,Subsidiary only
+CA,NC-CA,INC_TAX,Federal and provincial income tax,Employee tax,CR,2160,International statutory payable,Subsidiary only
+CA,NC-CA,CPP_EE,CPP employee,Employee tax,CR,2160,International statutory payable,Subsidiary only
+CA,NC-CA,EI_EE,EI employee,Employee tax,CR,2160,International statutory payable,Subsidiary only
+CA,NC-CA,GARN_FRO,Family support order (garnishment),Deduction,CR,2150,Garnishments payable,Subsidiary only
+CA,NC-CA,NET_PAY,Net pay,Net pay,CR,2170,International provider clearing,Subsidiary only
+CA,NC-CA,ER_CPP_EI,CPP and EI employer,Employer cost,DR,6220,Employer social charges - international,"Department, location, class"
+CA,NC-CA,ER_CPP_EI,CPP and EI employer,Employer cost,CR,2160,International statutory payable,Subsidiary only
+CA,NC-CA,ER_BENEFITS,Employer-paid benefits (5% of gross; provider),Employer cost,DR,6240,Employer benefits,"Department, location, class"
+CA,NC-CA,ER_BENEFITS,Employer-paid benefits (5% of gross; provider),Employer cost,CR,2143,Employer benefits accrued,Subsidiary only
+CA,NC-CA,ACCR_LEAVE,Leave liability true-up,Accrual,DR,6130,Paid time off,"Department, location, class"
+CA,NC-CA,ACCR_LEAVE,Leave liability true-up,Accrual,CR,2190,Accrued leave liability,Subsidiary only
+CA,NC-CA,BANK_CLR,Provider funded (net pay),Settlement,DR,2170,International provider clearing,Subsidiary only
+CA,NC-CA,BANK_CLR,Provider funded (net pay),Settlement,CR,1010,Operating cash,Subsidiary only

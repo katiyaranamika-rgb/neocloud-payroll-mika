@@ -1,0 +1,7 @@
+worker_id,field,class,root_cause,disposition
+E0006,*,Data,Provider paid out the Sep 30 holiday balance (14.5 days) and missed October accrual for the leaver.,Workday balance is the system of record. Ask provider to pay the extra accrued days on a supplementary run.
+E0009,*,Provider error,Provider paid the full month to a leaver terminated Oct 15 (termination event ignored).,Overpayment of half a month. Provider to recover from final settlement; raise a service ticket.
+E0052,*,Data,Provider payslip shows earned leave of 14.0 days; Workday shows 15.0 after accrual and the Oct 22 half-day. Provider did not load the October absence file.,Workday is the source of truth for balances printed on payslips. Provider to reload absence and reissue payslip.
+E0084,*,Timing,Salary increase effective Oct 12 reached the provider after the Oct 12 change cutoff; provider paid the old salary for the full month.,Workday is correct. Provider pays the Oct 12–31 difference as arrears in November; track on the cutover issue log.
+E0086,*,Configuration difference,"Provider computed employer PF on full basic, without the ₹15,000 wage ceiling.","Workday applies the ceiling (max ₹1,800). Ask provider to configure the PF wage ceiling; credit note for the overcharge."
+E0341,*,Timing,Sign-on bonus one-time payment was sent on a late PECI file and not processed this month.,Pay in the November run (or supplementary). Confirm the PECI late-change process.

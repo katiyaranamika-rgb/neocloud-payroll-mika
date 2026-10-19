@@ -1,0 +1,189 @@
+{
+  "_readme": "Read-only rule parameters. Sources: 'Overtime rules.xlsx', 'Supplemental Tax rate and Benefit ded.xlsx' and the Phase 0 / module decisions. Changing these is a configuration change, not a data edit, so the app does not expose them for editing.",
+  "payDateAdjustment": {
+    "rule": "If a pay date falls on a weekend, pay on the preceding business day",
+    "source": "Module 5 decision 5.3"
+  },
+  "time": {
+    "workweekStartsOn": "Sunday",
+    "nightWindow": {
+      "start": "22:00",
+      "end": "06:00",
+      "ratePerHour": 3.0
+    },
+    "shiftDifferentials": {
+      "NGHT": 2.5,
+      "WKND": 1.0,
+      "SWNG": 0,
+      "DAY": 0,
+      "STD": 0,
+      "PT": 0
+    },
+    "differentialsStack": false,
+    "groups": {
+      "US California Non-Exempt": {
+        "dailyOtAfter": 8,
+        "dailyDtAfter": 12,
+        "weeklyOtAfter": 40,
+        "seventhDay": {
+          "otFirstHours": 8
+        },
+        "mealPenalty": {
+          "minShiftHours": 5,
+          "lateAfterHours": 5,
+          "maxPerDay": 1
+        }
+      },
+      "US Non-California Non-Exempt": {
+        "weeklyOtAfter": 40
+      }
+    },
+    "offScheduleToleranceMinutes": 30
+  },
+  "usTax": {
+    "fitFlatRate": 0.22,
+    "sitRates": {
+      "CA": 0.06,
+      "NY": 0.055,
+      "MA": 0.05,
+      "IL": 0.0495,
+      "GA": 0.0539,
+      "CO": 0.044,
+      "TX": 0,
+      "WA": 0
+    },
+    "caSdiRate": 0.012,
+    "oasdiRate": 0.062,
+    "oasdiWageBase": 168600,
+    "medicareRate": 0.0145,
+    "futaRate": 0.006,
+    "futaWageBase": 7000,
+    "suiRate": 0.034,
+    "suiWageBase": 7000,
+    "ytdMethod": "Derived: per-period pay x 2026 periods worked before this period (since Jan 1 or hire date)"
+  },
+  "garnishment": {
+    "childSupportMaxPctOfDisposable": 0.5,
+    "creditorMaxPctOfDisposable": 0.2,
+    "creditorExcessPct": 0.4,
+    "caMinimumWage": 16.9,
+    "creditorWeeklyMinWageMultiple": 48
+  },
+  "benefits": {
+    "employerLoadPctOfGross": 0.1,
+    "k401MatchPct": 1.0,
+    "k401MatchCapPctOfGross": 0.04
+  },
+  "intl": {
+    "fxToUsd": {
+      "USD": 1,
+      "GBP": 1.27,
+      "CAD": 0.73,
+      "INR": 0.012
+    },
+    "ukEmployerNi": {
+      "rate": 0.138,
+      "monthlySecondaryThreshold": 758
+    },
+    "caEmployerCppEi": {
+      "rate": 0.075
+    },
+    "employerBenefitsLoadPctOfGross": 0.05,
+    "inEmployerPf": {
+      "rate": 0.12,
+      "basicPctOfGross": 0.5,
+      "basicCap": 15000
+    }
+  },
+  "absence": {
+    "US Hourly Vacation": {
+      "unit": "hrs",
+      "method": "per_hour_worked",
+      "rate": 0.0462,
+      "cap": 120,
+      "payout": true
+    },
+    "CA Paid Sick Leave": {
+      "unit": "hrs",
+      "method": "per_hour_worked",
+      "rate": 0.033333,
+      "cap": 80,
+      "payout": false,
+      "exemptWeeklyHours": 40
+    },
+    "NY Paid Sick Leave": {
+      "unit": "hrs",
+      "method": "per_hour_worked",
+      "rate": 0.033333,
+      "cap": 56,
+      "payout": false,
+      "exemptWeeklyHours": 40
+    },
+    "MA Earned Sick Time": {
+      "unit": "hrs",
+      "method": "per_hour_worked",
+      "rate": 0.033333,
+      "cap": 40,
+      "payout": false,
+      "exemptWeeklyHours": 40
+    },
+    "IL Paid Leave for All Workers": {
+      "unit": "hrs",
+      "method": "per_hour_worked",
+      "rate": 0.033333,
+      "cap": 40,
+      "payout": false,
+      "exemptWeeklyHours": 40
+    },
+    "CO Paid Sick Leave": {
+      "unit": "hrs",
+      "method": "per_hour_worked",
+      "rate": 0.033333,
+      "cap": 48,
+      "payout": false,
+      "exemptWeeklyHours": 40
+    },
+    "TX Hourly Sick (company)": {
+      "unit": "hrs",
+      "method": "per_hour_worked",
+      "rate": 0.019231,
+      "cap": 40,
+      "payout": false
+    },
+    "US Flexible PTO": {
+      "unit": "hrs",
+      "method": "none",
+      "payout": false,
+      "unlimited": true
+    },
+    "UK Annual Leave": {
+      "unit": "days",
+      "method": "monthly",
+      "perMonth": 2.3333,
+      "payout": true
+    },
+    "Canada Vacation": {
+      "unit": "days",
+      "method": "monthly",
+      "perMonth": 1.25,
+      "payout": true
+    },
+    "India Earned Leave": {
+      "unit": "days",
+      "method": "monthly",
+      "perMonth": 1.5,
+      "payout": true
+    },
+    "India Sick/Casual Leave": {
+      "unit": "days",
+      "method": "frontloaded",
+      "payout": false
+    },
+    "Canada Sick Leave": {
+      "unit": "days",
+      "method": "frontloaded",
+      "payout": false
+    }
+  },
+  "payoutDailyRate": "(annual salary / 52) / working days per week; payout = days x daily rate. US hourly: hours x base rate."
+}

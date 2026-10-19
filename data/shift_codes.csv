@@ -1,0 +1,7 @@
+code,name,work_schedule,days,start,end,meal_min,paid_hours,crosses_midnight
+STD,Standard,Standard (Mon–Fri 9:00–17:30),Mon–Fri,09:00,17:30,30,8,N
+DAY,Day,Shift A – Day (Mon–Fri 06:00–14:30),Mon–Fri,06:00,14:30,30,8,N
+SWNG,Swing,Shift B – Swing (Mon–Fri 14:00–22:30),Mon–Fri,14:00,22:30,30,8,N
+NGHT,Night,Shift C – Night (Sun–Thu 22:00–06:30),Sun–Thu,22:00,06:30,30,8,Y
+WKND,Weekend,Shift D – Weekend (Fri–Sun 06:00–18:30),Fri–Sun,06:00,18:30,30,12,N
+PT,Part-time Day,Part-time – Day (Mon/Wed/Fri 06:00–14:30),Mon/Wed/Fri,06:00,14:30,30,8,N

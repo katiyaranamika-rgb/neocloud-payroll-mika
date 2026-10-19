@@ -1,0 +1,77 @@
+event_id,worker_id,event_type,effective_start,effective_end,time_off_plan,quantity,unit,status,notes,change_field,old_value,new_value
+EV001,E0000,Time Off,2026-10-20,2026-10-20,CA Paid Sick Leave,8,hrs,Approved,Sick day,,,
+EV002,E0008,Time Off,2026-10-13,2026-10-13,Canada Vacation,1,days,Approved,Bridging Thanksgiving (Mon Oct 12),,,
+EV003,E0008,Time Off,2026-10-14,2026-10-14,Canada Vacation,1,days,Approved,Bridging Thanksgiving (Mon Oct 12),,,
+EV004,E0052,Time Off,2026-10-07,2026-10-07,India Sick/Casual Leave,1,days,Approved,Sick day,,,
+EV005,E0052,Time Off,2026-10-22,2026-10-22,India Earned Leave,0.5,days,Approved,Half day,,,
+EV006,E0059,Time Off,2026-10-29,2026-10-29,UK Annual Leave,1,days,Approved,Annual leave (2 days),,,
+EV007,E0059,Time Off,2026-10-30,2026-10-30,UK Annual Leave,1,days,Approved,Annual leave (2 days),,,
+EV008,E0073,Time Off,2026-10-07,2026-10-07,US Hourly Vacation,8,hrs,Approved,Part-time scheduled day (Mon/Wed/Fri),,,
+EV009,E0073,Time Off,2026-10-12,2026-10-12,TX Hourly Sick (company),4,hrs,Approved,Partial day (left at midday),,,
+EV010,E0073,Time Off,2026-10-19,2026-10-19,US Hourly Vacation,8,hrs,Approved,Future-dated – falls in next biweekly period,,,
+EV011,E0088,Time Off,2026-10-09,2026-10-09,US Hourly Vacation,12,hrs,Approved,Weekend-shift worker; Friday scheduled shift (12 paid hrs),,,
+EV012,E0088,Time Off,2026-10-16,2026-10-16,US Hourly Vacation,12,hrs,Approved,Weekend-shift worker; Friday scheduled shift (12 paid hrs),,,
+EV013,E0096,Time Off,2026-10-16,2026-10-16,TX Hourly Sick (company),3,hrs,Approved,Uses full remaining sick balance (3 hrs),,,
+EV014,E0149,Unpaid Leave,2026-10-02,,,,,Approved,"Unpaid leave starting mid-period (US Semi-monthly); open-ended, no return date",,,
+EV015,E0031,Unpaid Leave,2026-10-21,2026-11-20,,,,Approved,Unpaid leave starting mid-period (US Semi-monthly Oct 16–31); returns Nov 21,,,
+EV016,E0134,Unpaid Leave,2026-10-09,2026-10-25,,,,Approved,Unpaid leave starting mid-period (US Biweekly Oct 4–17); spans into next period,,,
+EV017,E0070,Unpaid Leave,2026-10-19,2026-11-13,,,,Approved,Unpaid leave starting mid-period (UK Monthly Oct 1–31); returns Nov 16,,,
+EV018,E0022,Comp Change,2026-10-10,,,,,Approved,"Mid-period rate change effective Sat Oct 10 (US Biweekly Oct 4–17); Oct 5–9 punches at old rate, Oct 12–16 at new rate",Hourly Rate (USD),38,40
+EV019,E0005,Location Change,2026-10-23,,,,,Approved,"State-to-state move mid-period (US Semi-monthly Oct 16–31); update state tax (CA→WA, no state income tax); CA sick balance to be reviewed for WA PSL",Work Location / State,"San Jose, CA","Dallas, TX"
+EV020,E0034,Garnishment,2026-08-01,,,,,Active,"Hourly EE; Case # CS-2026-0418 (CA DCSS); ongoing, deduct every pay period",Child Support Order,,25% of disposable earnings
+EV021,E0035,Garnishment,2026-09-01,,,,,Active,"Salaried EE; Writ # CV-26-7731 (creditor judgment); remaining balance $4,200.00",Creditor Garnishment,,$350.00 per pay period
+EV022,E0017,Garnishment,2026-01-01,,,,,Active,"Case # TBD; ongoing, deduct every pay period",Child Support Order,,$830.00 per pay period
+EV023,E0015,Comp Change,2026-10-12,,,,,Approved,"Merit increase effective Mon Oct 12 (US Biweekly Oct 4–17); Oct 5–10 punches at old rate, Oct 12–16 at new rate",Hourly Rate (USD),33,35
+EV024,E0002,Comp Change,2026-10-19,,,,,Approved,Merit increase effective Mon Oct 19 (US Semi-monthly Oct 16–31); prorate Oct 16–18 old / Oct 19–31 new,Annual Salary (USD),353000,370000
+EV025,E0084,Comp Change,2026-10-12,,,,,Approved,Salary increase effective Mon Oct 12 (UK Monthly Oct 1–31); prorate Oct 1–11 old / Oct 12–31 new,Annual Salary (GBP),81000,88000
+EV026,E0086,Comp Change,2026-10-19,,,,,Approved,Salary increase effective Mon Oct 19 (India Monthly Oct 1–31); prorate Oct 1–18 old / Oct 19–31 new,Annual Salary (INR),6760000,7300000
+EV027,E0014,Location Change,2026-10-19,,,,,Approved,State-to-state move mid-period (US Semi-monthly Oct 16–31); split state tax TX→CA (CA SIT/SDI start Oct 19); enroll in CA Paid Sick Leave,Work Location / State,"Austin, TX","San Jose, CA"
+EV028,E0007,Location Change,2026-10-26,,,,,Approved,State-to-state move mid-period (US Semi-monthly Oct 16–31); split state tax CA→TX (CA SIT/SDI stop Oct 25); CA sick balance to be reviewed,Work Location / State,"San Francisco, CA","Austin, TX"
+EV029,E0011,Location Change,2026-10-19,,,,,Approved,"Intra-state move mid-period (US Semi-monthly Oct 16–31); same state (CA), work city changes San Jose→San Francisco for local reporting",Work Location / City,"San Jose, CA","San Francisco, CA"
+EV030,E0203,Bonus,2026-10-21,2026-10-21,,,,Approved,New hire Oct 21 (mid-period); one-time sign-on paid in US Semi-monthly Oct 16–31,Sign-on Bonus (USD),,15000
+EV031,E0342,Bonus,2026-10-19,2026-10-19,,,,Approved,New hire Oct 19 (mid-period); one-time sign-on paid in US Semi-monthly Oct 16–31,Sign-on Bonus (USD),,10000
+EV032,E0344,Bonus,2026-10-20,2026-10-20,,,,Approved,New hire Oct 20 (mid-period); one-time sign-on paid in US Semi-monthly Oct 16–31,Sign-on Bonus (USD),,12500
+EV033,E0347,Bonus,2026-10-22,2026-10-22,,,,Approved,New hire Oct 22 (mid-period); one-time sign-on paid in US Semi-monthly Oct 16–31,Sign-on Bonus (USD),,7500
+EV034,E0349,Bonus,2026-10-26,2026-10-26,,,,Approved,New hire Oct 26 (mid-period); one-time sign-on paid in US Semi-monthly Oct 16–31,Sign-on Bonus (USD),,10000
+EV035,E0336,Bonus,2026-10-16,2026-10-16,,,,Approved,Sign-on deferred to first eligible period after 30-day probation; US Semi-monthly Oct 16–31,Sign-on Bonus (USD),,5000
+EV036,E0346,Bonus,2026-10-07,2026-10-07,,,,Approved,Hourly new hire Oct 7; one-time sign-on paid in US Biweekly Oct 4–17 (supplemental wages),Sign-on Bonus (USD),,2000
+EV037,E0348,Bonus,2026-10-14,2026-10-14,,,,Approved,Hourly new hire Oct 14; one-time sign-on paid in US Biweekly Oct 4–17 (supplemental wages),Sign-on Bonus (USD),,1500
+EV038,E0340,Bonus,2026-10-01,2026-10-01,,,,Approved,Sign-on paid in UK Monthly Oct 1–31; subject to PAYE/NIC; clawback if leaves within 12 months,Sign-on Bonus (GBP),,7500
+EV039,E0341,Bonus,2026-10-01,2026-10-01,,,,Approved,New hire Oct 1; sign-on paid in UK Monthly Oct 1–31; subject to PAYE/NIC,Sign-on Bonus (GBP),,5000
+EV040,E0338,Bonus,2026-10-01,2026-10-01,,,,Approved,Joining bonus paid in India Monthly Oct 1–31; taxable under TDS; clawback if leaves within 12 months,Sign-on Bonus (INR),,500000
+EV041,E0339,Bonus,2026-10-01,2026-10-01,,,,Approved,Joining bonus paid in India Monthly Oct 1–31; taxable under TDS,Sign-on Bonus (INR),,300000
+EV042,E0001,Bonus,2026-10-16,2026-10-16,,,,Approved,"Spot award – GPU Cloud launch; one-time, US Semi-monthly Oct 16–31 (supplemental wages)",Spot Bonus (USD),,2500
+EV043,E0010,Bonus,2026-10-16,2026-10-16,,,,Approved,"Spot award; one-time, US Semi-monthly Oct 16–31 (supplemental wages)",Spot Bonus (USD),,2000
+EV044,E0012,Bonus,2026-10-16,2026-10-16,,,,Approved,"Spot award; one-time, US Semi-monthly Oct 16–31 (supplemental wages)",Spot Bonus (USD),,1500
+EV045,E0016,Bonus,2026-10-16,2026-10-16,,,,Approved,"Spot award; one-time, US Semi-monthly Oct 16–31 (supplemental wages)",Spot Bonus (USD),,1000
+EV046,E0018,Bonus,2026-10-16,2026-10-16,,,,Approved,"Spot award; one-time, US Semi-monthly Oct 16–31 (supplemental wages)",Spot Bonus (USD),,1500
+EV047,E0024,Bonus,2026-10-16,2026-10-16,,,,Approved,"Spot award; one-time, US Semi-monthly Oct 16–31 (supplemental wages)",Spot Bonus (USD),,2000
+EV048,E0026,Bonus,2026-10-16,2026-10-16,,,,Approved,"Spot award; one-time, US Semi-monthly Oct 16–31 (supplemental wages)",Spot Bonus (USD),,1000
+EV049,E0020,Bonus,2026-10-04,2026-10-04,,,,Approved,Hourly non-exempt spot award; US Biweekly Oct 4–17; discretionary (excluded from regular rate),Spot Bonus (USD),,500
+EV050,E0023,Bonus,2026-10-04,2026-10-04,,,,Approved,Hourly non-exempt spot award; US Biweekly Oct 4–17; discretionary (excluded from regular rate),Spot Bonus (USD),,750
+EV051,E0036,Bonus,2026-10-04,2026-10-04,,,,Approved,Hourly non-exempt spot award; US Biweekly Oct 4–17; discretionary (excluded from regular rate),Spot Bonus (USD),,500
+EV052,E0071,Bonus,2026-10-04,2026-10-04,,,,Approved,Hourly non-exempt spot award; US Biweekly Oct 4–17; discretionary (excluded from regular rate),Spot Bonus (USD),,750
+EV053,E0113,Bonus,2026-10-04,2026-10-04,,,,Approved,Hourly non-exempt spot award; US Biweekly Oct 4–17; discretionary (excluded from regular rate),Spot Bonus (USD),,500
+EV054,E0068,Bonus,2026-10-01,2026-10-01,,,,Approved,"Spot award; one-time, UK Monthly Oct 1–31; subject to PAYE/NIC",Spot Bonus (GBP),,1000
+EV055,E0095,Bonus,2026-10-01,2026-10-01,,,,Approved,"Spot award; one-time, UK Monthly Oct 1–31; subject to PAYE/NIC",Spot Bonus (GBP),,1000
+EV056,E0121,Bonus,2026-10-01,2026-10-01,,,,Approved,"Spot award; one-time, UK Monthly Oct 1–31; subject to PAYE/NIC",Spot Bonus (GBP),,750
+EV057,E0155,Bonus,2026-10-01,2026-10-01,,,,Approved,"Spot award; one-time, UK Monthly Oct 1–31; subject to PAYE/NIC",Spot Bonus (GBP),,500
+EV058,E0192,Bonus,2026-10-01,2026-10-01,,,,Approved,"Spot award; one-time, UK Monthly Oct 1–31; subject to PAYE/NIC",Spot Bonus (GBP),,500
+EV059,E0050,Bonus,2026-10-01,2026-10-01,,,,Approved,"Spot award; one-time, India Monthly Oct 1–31; taxable under TDS",Spot Bonus (INR),,50000
+EV060,E0091,Bonus,2026-10-01,2026-10-01,,,,Approved,"Spot award; one-time, India Monthly Oct 1–31; taxable under TDS",Spot Bonus (INR),,40000
+EV061,E0115,Bonus,2026-10-01,2026-10-01,,,,Approved,"Spot award; one-time, India Monthly Oct 1–31; taxable under TDS",Spot Bonus (INR),,30000
+EV062,E0122,Bonus,2026-10-01,2026-10-01,,,,Approved,"Spot award; one-time, India Monthly Oct 1–31; taxable under TDS",Spot Bonus (INR),,25000
+EV063,E0131,Bonus,2026-10-01,2026-10-01,,,,Approved,"Spot award; one-time, India Monthly Oct 1–31; taxable under TDS",Spot Bonus (INR),,35000
+EV064,E0008,Bonus,2026-10-01,2026-10-01,,,,Approved,"Spot award; one-time, Canada Monthly Oct 1–31; subject to CPP/EI and income tax",Spot Bonus (CAD),,2000
+EV065,E0350,Time Off,2026-10-22,2026-10-22,Canada Vacation,1,days,Approved,Vacation day,,,
+EV066,E0352,Time Off,2026-10-26,2026-10-26,Canada Vacation,1,days,Approved,Vacation (3-day block),,,
+EV067,E0352,Time Off,2026-10-27,2026-10-27,Canada Vacation,1,days,Approved,Vacation (3-day block),,,
+EV068,E0352,Time Off,2026-10-28,2026-10-28,Canada Vacation,1,days,Approved,Vacation (3-day block),,,
+EV069,E0354,Time Off,2026-10-12,2026-10-12,Canada Sick Leave,1,days,Approved,Sick day,,,
+EV070,E0359,Unpaid Leave,2026-10-15,2026-11-19,,,,Approved,Unpaid personal leave starting mid-period (Canada Monthly Oct 1–31); returns Nov 20; issue ROE if interruption of earnings 7+ days,,,
+EV071,E0365,Comp Change,2026-10-14,,,,,Approved,"Merit increase effective Wed Oct 14 (Canada Monthly Oct 1–31); Oct 1–13 hours at old rate, Oct 14–31 at new rate",Hourly Rate (CAD),34.5,36
+EV072,E0361,Comp Change,2026-10-16,,,,,Approved,Promotion increase effective Fri Oct 16 (Canada Monthly Oct 1–31); prorate salary by working days,Annual Salary (CAD),210000,220000
+EV073,E0366,Garnishment,2026-09-01,,,,,Active,"Hourly EE; Ontario Family Responsibility Office (FRO) support deduction notice; ongoing, deduct every pay period",Family Support Order,,50% of net pay (FRO max)
+EV074,E0357,Bonus,2026-10-15,2026-10-15,,,,Approved,New hire Oct 15 (mid-period); one-time sign-on paid in Canada Monthly Oct 1–31; subject to CPP/EI and income tax,Sign-on Bonus (CAD),,10000
+EV075,E0364,Bonus,2026-10-23,2026-10-23,,,,Approved,New hire Oct 23 (mid-period); one-time sign-on paid in Canada Monthly Oct 1–31; subject to CPP/EI and income tax,Sign-on Bonus (CAD),,7500
+EV076,E0373,Bonus,2026-10-01,2026-10-01,,,,Approved,"Spot award; one-time, Canada Monthly Oct 1–31; subject to CPP/EI and income tax",Spot Bonus (CAD),,2500

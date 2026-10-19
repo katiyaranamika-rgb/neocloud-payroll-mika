@@ -1,0 +1,36 @@
+account,name,type,segment_level
+1010,Operating cash,Asset,Subsidiary
+1250,Employee receivable - benefit arrears,Asset,Subsidiary
+2100,Gross pay clearing,Liability,Subsidiary
+2101,Net pay payable (bank),Liability,Subsidiary
+2105,Accrued wages,Liability,Subsidiary
+2110,Federal income tax withheld,Liability,Subsidiary
+2115-CA,State income tax withheld - CA,Liability,Subsidiary
+2115-NY,State income tax withheld - NY,Liability,Subsidiary
+2115-MA,State income tax withheld - MA,Liability,Subsidiary
+2115-IL,State income tax withheld - IL,Liability,Subsidiary
+2115-GA,State income tax withheld - GA,Liability,Subsidiary
+2115-CO,State income tax withheld - CO,Liability,Subsidiary
+2120,Employee FICA withheld,Liability,Subsidiary
+2125,CA SDI withheld,Liability,Subsidiary
+2130,Employer FICA payable,Liability,Subsidiary
+2131,FUTA payable,Liability,Subsidiary
+2132,SUI payable,Liability,Subsidiary
+2141,401(k) payable (employee + match),Liability,Subsidiary
+2142,Health benefits payable,Liability,Subsidiary
+2143,Employer benefits accrued,Liability,Subsidiary
+2150,Garnishments payable,Liability,Subsidiary
+2160,International statutory payable,Liability,Subsidiary
+2170,International provider clearing,Liability,Subsidiary
+2190,Accrued leave liability,Liability,Subsidiary
+6100,Salaries - regular,Expense,Department
+6110,Overtime and double time,Expense,Department
+6115,Shift and night differential,Expense,Department
+6120,Meal period premiums,Expense,Department
+6130,Paid time off,Expense,Department
+6140,Bonuses,Expense,Department
+6200,Employer social security and Medicare,Expense,Department
+6210,Employer unemployment (FUTA/SUI),Expense,Department
+6220,Employer social charges - international,Expense,Department
+6230,Employer 401(k) match,Expense,Department
+6240,Employer benefits,Expense,Department

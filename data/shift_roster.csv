@@ -1,0 +1,13 @@
+seq,worker_id,date,shift_code,source,reason,updated_on,updated_by
+1,E0020,2026-10-04,DAY,Scheduler,Sunday coverage,2026-09-28,E0019
+2,E0020,2026-10-10,DAY,Scheduler,Saturday coverage,2026-09-28,E0019
+3,E0225,2026-10-13,SWNG,Scheduler,Swing coverage,2026-10-06,E0044
+4,E0040,2026-10-10,DAY,Manager,Saturday coverage (OT approved),2026-10-08,E0019
+5,E0142,2026-10-16,NGHT,Scheduler,Friday night coverage,2026-10-09,E0079
+6,E0142,2026-10-17,NGHT,Scheduler,Saturday night coverage,2026-10-09,E0079
+7,E0225,2026-10-13,DAY,Manager,Coverage cancelled – back to default,2026-10-10,E0044
+8,E0023,2026-10-14,DAY,Swap,Shift swap with E0028 (approved),2026-10-12,E0019
+9,E0028,2026-10-14,SWNG,Swap,Shift swap with E0023 (approved),2026-10-12,E0019
+10,E0015,2026-10-17,SWNG,Manager,Saturday coverage,2026-10-15,E0014
+11,E0023,2026-10-14,SWNG,Manager,Correction – swap not worked; E0023 worked swing (punches 13:54–22:22),2026-10-17,
+12,E0028,2026-10-14,DAY,Manager,Correction – swap not worked; E0028 worked usual day shift,2026-10-17,

@@ -1,0 +1,50 @@
+code,name,category,calc_basis,fed_by,taxability,in_regular_rate,k401_eligible,active
+REG_SAL,Regular salary,Earning,Annual / 24 prorated by working days,Compensation,Taxable,N,Y,Y
+REG_HRS,Regular hours,Earning,Hours x base rate on work date,Time,Taxable,Y,Y,Y
+UNPD_LV,Unpaid leave dock,Earning,Working days x daily rate (negative),Absence,Taxable,N,Y,Y
+RETRO_SAL,Retro salary,Earning,Recalculated minus paid salary,Compensation (late entry),Taxable,N,Y,Y
+RETRO_HRS,Retro hours,Earning,Recalculated minus paid prior-period day,Time (prior period),Taxable,Y,Y,Y
+OT_15,Overtime 1.5x,Earning,OT hours x (base + 0.5 x regular rate),Time,Taxable,N,Y,Y
+DT_20,Double time 2x,Earning,DT hours x (base + 1.0 x regular rate),Time,Taxable,N,Y,Y
+SVD_15,7th day first 8 hrs (CA),Earning,Hours x (base + 0.5 x regular rate),Time,Taxable,N,Y,Y
+SVD_20,7th day over 8 hrs (CA),Earning,Hours x (base + 1.0 x regular rate),Time,Taxable,N,Y,Y
+DIFF_NGT,Night differential,Earning,$3.00 x hours 22:00-06:00,Time,Taxable,Y,Y,Y
+DIFF_NGHT,NGHT shift differential,Earning,$2.50 x NGHT hours outside night window,Time,Taxable,Y,Y,Y
+DIFF_WKND,WKND shift differential,Earning,$1.00 x WKND hours outside night window,Time,Taxable,Y,Y,Y
+MEAL_PEN,Meal period premium (CA),Earning,1 hr x regular rate (max 1/day),Time + attestation,Taxable,N,Y,Y
+VAC_HRS,Vacation hours,Earning,Hours x base rate,Absence,Taxable,N,Y,Y
+SICK_HRS,Sick hours,Earning,Hours x base rate,Absence,Taxable,N,Y,Y
+LEAVE_PAID,Paid leave (scheduled hours),Earning,Scheduled hours x base rate,Absence,Taxable,N,Y,Y
+PTO_FLEX,Flexible PTO hours (memo),Earning,$0 memo line,Absence,Memo,N,N,Y
+BON_SIGN,Sign-on bonus,Earning,Flat amount,One-time payment,Taxable (supplemental),N,Y,Y
+BON_SPOT,Spot bonus (discretionary),Earning,Flat amount,One-time payment,Taxable (supplemental),N,Y,Y
+VAC_PAYOUT,Vacation payout at termination,Earning,Hours x base rate,Absence (termination),Taxable,N,Y,Y
+HOL_STAT,Holiday pay,Earning,Hours x base rate,Calendar,Taxable,N,Y,Y
+401K_EE,401(k) deferral,Deduction,Employee % x gross,Payroll inputs,Pre-tax (FIT/SIT exempt; FICA subject),N,N,Y
+MED_EE,Medical,Deduction,Flat per period,Payroll inputs,Pre-tax Section 125,N,N,Y
+DEN_EE,Dental,Deduction,Flat per period,Payroll inputs,Pre-tax Section 125,N,N,Y
+VIS_EE,Vision,Deduction,Flat per period,Payroll inputs,Pre-tax Section 125,N,N,Y
+BEN_ARR,Benefits arrears recovery,Deduction,Shortfall carried forward,Calculated,Post-tax,N,N,Y
+BEN_ARR_NEW,Benefits arrears created (receivable),Deduction,Uncollected flat benefits,Calculated,Memo (not withheld),N,N,Y
+GARN_CS,Child support,Deduction,Order amount capped at limit of disposable earnings,Events,Post-tax,N,N,Y
+GARN_CRED,Creditor garnishment,Deduction,Flat with balance; CA creditor limit,Events,Post-tax,N,N,Y
+FIT_EE,Federal income tax,EE Tax,22% of income-tax wages,Calculated,,N,N,Y
+SIT_CA,CA state income tax,EE Tax,6.0% of income-tax wages,Calculated,,N,N,Y
+SIT_NY,NY state income tax,EE Tax,5.5% of income-tax wages,Calculated,,N,N,Y
+SIT_MA,MA state income tax,EE Tax,5.0% of income-tax wages,Calculated,,N,N,Y
+SIT_IL,IL state income tax,EE Tax,4.95% of income-tax wages,Calculated,,N,N,Y
+SIT_GA,GA state income tax,EE Tax,5.39% of income-tax wages,Calculated,,N,N,Y
+SIT_CO,CO state income tax,EE Tax,4.4% of income-tax wages,Calculated,,N,N,Y
+SDI_CA,CA disability insurance,EE Tax,1.2% of FICA wages,Calculated,,N,N,Y
+OASDI_EE,Social Security employee,EE Tax,6.2% of FICA wages to $168600 YTD,Calculated,,N,N,Y
+MEDI_EE,Medicare employee,EE Tax,1.45% of FICA wages,Calculated,,N,N,Y
+OASDI_ER,Social Security employer,ER Cost,6.2% of FICA wages to $168600 YTD,Calculated,,N,N,Y
+MEDI_ER,Medicare employer,ER Cost,1.45% of FICA wages,Calculated,,N,N,Y
+FUTA_ER,Federal unemployment,ER Cost,0.6% of first $7000 YTD,Calculated,,N,N,Y
+SUI_ER,State unemployment,ER Cost,3.4% of first $7000 YTD,Calculated,,N,N,Y
+401K_ER,401(k) match,ER Cost,100% of deferral up to 4% of gross,Calculated,,N,N,Y
+BEN_ER,Employer benefits load,ER Cost,10% of gross,Calculated,,N,N,Y
+NET_PAY,Net pay (US),Net,Gross - deductions - taxes,Calculated,,N,N,Y
+ACCR_WAGES,Accrued wages (biweekly Oct 18-31),Accrual,2 weeks x scheduled hours x rate,Calculated,,N,N,Y
+ACCR_LEAVE,Leave liability true-up,Accrual,Ending - opening liability,Calculated,,N,N,Y
+BANK_CLR,Bank file and checks cleared,Net,Net pay,Bank,,N,N,Y

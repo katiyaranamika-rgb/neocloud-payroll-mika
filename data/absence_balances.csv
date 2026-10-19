@@ -1,0 +1,643 @@
+worker_id,plan,balance,unlimited,unit,last_accrual_date,notes
+E0001,US Flexible PTO,,Y,,,
+E0021,US Hourly Vacation,46.5,,hrs,2026-10-03,Accrues per hour worked
+E0021,CA Paid Sick Leave,28,,hrs,2026-10-03,
+E0006,UK Annual Leave,14.5,,days,2026-09-30,Holiday year Jan–Dec; Payout on termination
+E0008,Canada Vacation,9,,days,2026-09-30,"Ontario, 3 weeks/year"
+E0009,India Earned Leave,11,,days,2026-09-30,Karnataka S&E Act; Payout on termination
+E0148,US Hourly Vacation,31,,hrs,2026-10-03,Payout on termination
+E0148,CA Paid Sick Leave,,,hrs,2026-10-03,CA Labor Code 246; accrual cap 80 hrs; no payout on termination – balance needed
+E0000,US Flexible PTO,,Y,,,No accrual
+E0000,CA Paid Sick Leave,67.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0002,US Flexible PTO,,Y,,,No accrual
+E0002,CA Paid Sick Leave,24.25,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0003,US Flexible PTO,,Y,,,No accrual
+E0004,US Flexible PTO,,Y,,,No accrual
+E0005,US Flexible PTO,,Y,,,No accrual
+E0005,CA Paid Sick Leave,63.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0007,US Flexible PTO,,Y,,,No accrual
+E0007,CA Paid Sick Leave,68,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0010,US Flexible PTO,,Y,,,No accrual
+E0010,CA Paid Sick Leave,61.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0011,US Flexible PTO,,Y,,,No accrual
+E0011,CA Paid Sick Leave,63,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0012,US Flexible PTO,,Y,,,No accrual
+E0012,CA Paid Sick Leave,54.25,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0013,US Flexible PTO,,Y,,,No accrual
+E0013,CA Paid Sick Leave,73.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0014,US Flexible PTO,,Y,,,No accrual
+E0015,US Hourly Vacation,120,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0015,TX Hourly Sick (company),6.5,,hrs,2026-10-03,Company policy; 40 hrs/yr
+E0016,US Flexible PTO,,Y,,,No accrual
+E0017,US Flexible PTO,,Y,,,No accrual
+E0018,US Flexible PTO,,Y,,,No accrual
+E0018,NY Paid Sick Leave,47.25,,hrs,2026-09-30,NY Labor Law 196-b; 56 hrs/yr
+E0019,US Flexible PTO,,Y,,,No accrual
+E0019,CA Paid Sick Leave,47.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0020,US Hourly Vacation,120,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0020,CA Paid Sick Leave,31.75,,hrs,2026-10-03,CA Labor Code 246; accrual cap 80 hrs
+E0022,US Hourly Vacation,77.25,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0022,TX Hourly Sick (company),28,,hrs,2026-10-03,Company policy; 40 hrs/yr
+E0023,US Hourly Vacation,120,,hrs,2026-10-03,At 120-hr cap – accrual paused
+E0023,CA Paid Sick Leave,35.5,,hrs,2026-10-03,CA Labor Code 246; accrual cap 80 hrs
+E0024,US Flexible PTO,,Y,,,No accrual
+E0024,CA Paid Sick Leave,46.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0025,US Hourly Vacation,120,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0025,CA Paid Sick Leave,46.5,,hrs,2026-10-03,CA Labor Code 246; accrual cap 80 hrs
+E0026,US Flexible PTO,,Y,,,No accrual
+E0026,CA Paid Sick Leave,65.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0027,US Flexible PTO,,Y,,,No accrual
+E0027,CA Paid Sick Leave,28.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0028,US Hourly Vacation,120,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs; Payout on termination
+E0028,CA Paid Sick Leave,11,,hrs,2026-10-03,CA Labor Code 246; accrual cap 80 hrs
+E0029,US Hourly Vacation,74.5,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs; Payout on termination
+E0029,CA Paid Sick Leave,0,,hrs,2026-10-03,CA Labor Code 246; accrual cap 80 hrs
+E0030,US Flexible PTO,,Y,,,No accrual
+E0030,CA Paid Sick Leave,33.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0031,US Flexible PTO,,Y,,,No accrual
+E0031,CA Paid Sick Leave,25.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0032,US Flexible PTO,,Y,,,No accrual
+E0033,US Flexible PTO,,Y,,,No accrual
+E0034,US Hourly Vacation,93.75,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0034,CA Paid Sick Leave,28.5,,hrs,2026-10-03,CA Labor Code 246; accrual cap 80 hrs
+E0035,US Flexible PTO,,Y,,,No accrual
+E0035,CA Paid Sick Leave,54.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0036,US Hourly Vacation,120,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0036,TX Hourly Sick (company),14,,hrs,2026-10-03,Company policy; 40 hrs/yr
+E0037,US Flexible PTO,,Y,,,No accrual
+E0037,CA Paid Sick Leave,67.25,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0038,US Flexible PTO,,Y,,,No accrual
+E0038,MA Earned Sick Time,23.5,,hrs,2026-09-30,MA ESTL; 40 hrs/yr
+E0039,US Flexible PTO,,Y,,,No accrual
+E0040,US Hourly Vacation,120,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0040,CA Paid Sick Leave,39.75,,hrs,2026-10-03,CA Labor Code 246; accrual cap 80 hrs
+E0041,US Flexible PTO,,Y,,,No accrual
+E0041,MA Earned Sick Time,36.5,,hrs,2026-09-30,MA ESTL; 40 hrs/yr
+E0042,US Flexible PTO,,Y,,,No accrual
+E0042,CA Paid Sick Leave,65,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0043,US Flexible PTO,,Y,,,No accrual
+E0043,CA Paid Sick Leave,79,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0044,US Flexible PTO,,Y,,,No accrual
+E0044,CA Paid Sick Leave,31.25,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0045,US Flexible PTO,,Y,,,No accrual
+E0045,MA Earned Sick Time,36.5,,hrs,2026-09-30,MA ESTL; 40 hrs/yr
+E0046,US Flexible PTO,,Y,,,No accrual
+E0047,US Hourly Vacation,93.5,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs; Payout on termination
+E0047,TX Hourly Sick (company),5.5,,hrs,2026-10-03,Company policy; 40 hrs/yr
+E0048,US Flexible PTO,,Y,,,No accrual
+E0048,CA Paid Sick Leave,31,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0049,US Hourly Vacation,61.5,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0049,CA Paid Sick Leave,23.75,,hrs,2026-10-03,CA Labor Code 246; accrual cap 80 hrs
+E0050,India Earned Leave,21.5,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0050,India Sick/Casual Leave,1,,days,2026-09-30,12 days/yr; no carry-forward
+E0051,US Flexible PTO,,Y,,,No accrual
+E0052,India Earned Leave,14,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0052,India Sick/Casual Leave,7,,days,2026-09-30,12 days/yr; no carry-forward
+E0053,US Flexible PTO,,Y,,,No accrual
+E0053,CA Paid Sick Leave,55.25,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0054,US Flexible PTO,,Y,,,No accrual
+E0054,CA Paid Sick Leave,64.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0055,US Flexible PTO,,Y,,,No accrual
+E0055,CA Paid Sick Leave,48,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0056,US Flexible PTO,,Y,,,No accrual
+E0056,CA Paid Sick Leave,73.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0057,US Hourly Vacation,39.5,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs; Payout on termination
+E0057,CA Paid Sick Leave,65.5,,hrs,2026-10-03,CA Labor Code 246; accrual cap 80 hrs
+E0058,US Flexible PTO,,Y,,,No accrual
+E0059,UK Annual Leave,10,,days,2026-09-30,Holiday year Jan–Dec
+E0060,US Flexible PTO,,Y,,,No accrual
+E0060,NY Paid Sick Leave,28,,hrs,2026-09-30,NY Labor Law 196-b; 56 hrs/yr
+E0061,US Flexible PTO,,Y,,,No accrual
+E0062,US Flexible PTO,,Y,,,No accrual
+E0062,CA Paid Sick Leave,59.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0063,US Flexible PTO,,Y,,,No accrual
+E0064,US Flexible PTO,,Y,,,No accrual
+E0064,CA Paid Sick Leave,30.25,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0065,US Flexible PTO,,Y,,,No accrual
+E0066,US Flexible PTO,,Y,,,No accrual
+E0066,IL Paid Leave for All Workers,20.75,,hrs,2026-09-30,IL PLAWA; 40 hrs/yr
+E0067,US Flexible PTO,,Y,,,No accrual
+E0068,UK Annual Leave,10.5,,days,2026-09-30,Holiday year Jan–Dec
+E0069,US Flexible PTO,,Y,,,No accrual
+E0070,UK Annual Leave,2,,days,2026-09-30,Holiday year Jan–Dec
+E0071,US Hourly Vacation,80.25,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0071,CA Paid Sick Leave,38.25,,hrs,2026-10-03,CA Labor Code 246; accrual cap 80 hrs
+E0072,US Flexible PTO,,Y,,,No accrual
+E0072,CA Paid Sick Leave,63.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0073,US Hourly Vacation,92.25,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0073,TX Hourly Sick (company),13.75,,hrs,2026-10-03,Company policy; 40 hrs/yr
+E0074,US Hourly Vacation,73,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0074,CA Paid Sick Leave,39.5,,hrs,2026-10-03,CA Labor Code 246; accrual cap 80 hrs
+E0075,US Flexible PTO,,Y,,,No accrual
+E0075,CA Paid Sick Leave,33.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0076,US Flexible PTO,,Y,,,No accrual
+E0077,US Flexible PTO,,Y,,,No accrual
+E0077,CA Paid Sick Leave,79,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0078,US Hourly Vacation,67.75,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0078,CA Paid Sick Leave,13.5,,hrs,2026-10-03,CA Labor Code 246; accrual cap 80 hrs
+E0079,US Flexible PTO,,Y,,,No accrual
+E0080,US Flexible PTO,,Y,,,No accrual
+E0081,US Flexible PTO,,Y,,,No accrual
+E0081,CA Paid Sick Leave,49,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0082,US Flexible PTO,,Y,,,No accrual
+E0082,CA Paid Sick Leave,36,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0083,US Flexible PTO,,Y,,,No accrual
+E0084,UK Annual Leave,2.5,,days,2026-09-30,Holiday year Jan–Dec
+E0085,US Flexible PTO,,Y,,,No accrual
+E0085,CA Paid Sick Leave,73.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0086,India Earned Leave,1,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0086,India Sick/Casual Leave,2,,days,2026-09-30,12 days/yr; no carry-forward
+E0087,US Flexible PTO,,Y,,,No accrual
+E0087,CA Paid Sick Leave,73.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0088,US Hourly Vacation,90.75,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0088,CA Paid Sick Leave,1.75,,hrs,2026-10-03,CA Labor Code 246; accrual cap 80 hrs
+E0089,US Flexible PTO,,Y,,,No accrual
+E0089,CA Paid Sick Leave,56.25,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0090,US Flexible PTO,,Y,,,No accrual
+E0090,CA Paid Sick Leave,51.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0091,India Earned Leave,2,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0091,India Sick/Casual Leave,7.5,,days,2026-09-30,12 days/yr; no carry-forward
+E0092,US Flexible PTO,,Y,,,No accrual
+E0092,IL Paid Leave for All Workers,31,,hrs,2026-09-30,IL PLAWA; 40 hrs/yr
+E0093,US Flexible PTO,,Y,,,No accrual
+E0094,India Earned Leave,0.5,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0094,India Sick/Casual Leave,5,,days,2026-09-30,12 days/yr; no carry-forward
+E0095,UK Annual Leave,9.5,,days,2026-09-30,Holiday year Jan–Dec
+E0096,US Hourly Vacation,53.75,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0096,TX Hourly Sick (company),3,,hrs,2026-10-03,Company policy; 40 hrs/yr
+E0097,US Flexible PTO,,Y,,,No accrual
+E0097,CA Paid Sick Leave,45.25,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0098,UK Annual Leave,5.5,,days,2026-09-30,Holiday year Jan–Dec
+E0099,US Flexible PTO,,Y,,,No accrual
+E0099,MA Earned Sick Time,23.75,,hrs,2026-09-30,MA ESTL; 40 hrs/yr
+E0100,India Earned Leave,21.5,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0100,India Sick/Casual Leave,0.5,,days,2026-09-30,12 days/yr; no carry-forward
+E0101,US Flexible PTO,,Y,,,No accrual
+E0102,US Flexible PTO,,Y,,,No accrual
+E0102,CA Paid Sick Leave,49.25,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0103,US Flexible PTO,,Y,,,No accrual
+E0104,US Flexible PTO,,Y,,,No accrual
+E0104,CA Paid Sick Leave,72.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0105,US Flexible PTO,,Y,,,No accrual
+E0105,CA Paid Sick Leave,51,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0106,US Flexible PTO,,Y,,,No accrual
+E0106,NY Paid Sick Leave,46.75,,hrs,2026-09-30,NY Labor Law 196-b; 56 hrs/yr
+E0107,US Flexible PTO,,Y,,,No accrual
+E0107,CA Paid Sick Leave,36.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0108,US Flexible PTO,,Y,,,No accrual
+E0108,CA Paid Sick Leave,43,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0109,US Flexible PTO,,Y,,,No accrual
+E0109,MA Earned Sick Time,32,,hrs,2026-09-30,MA ESTL; 40 hrs/yr
+E0110,US Flexible PTO,,Y,,,No accrual
+E0111,US Flexible PTO,,Y,,,No accrual
+E0111,CA Paid Sick Leave,39.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0112,US Hourly Vacation,67.25,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0112,CA Paid Sick Leave,52.5,,hrs,2026-10-03,CA Labor Code 246; accrual cap 80 hrs
+E0113,US Hourly Vacation,39.5,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0113,TX Hourly Sick (company),1.25,,hrs,2026-10-03,Company policy; 40 hrs/yr
+E0114,US Flexible PTO,,Y,,,No accrual
+E0115,India Earned Leave,20.5,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0115,India Sick/Casual Leave,1,,days,2026-09-30,12 days/yr; no carry-forward
+E0116,India Earned Leave,27,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0116,India Sick/Casual Leave,6,,days,2026-09-30,12 days/yr; no carry-forward
+E0117,US Flexible PTO,,Y,,,No accrual
+E0117,MA Earned Sick Time,29.5,,hrs,2026-09-30,MA ESTL; 40 hrs/yr
+E0118,US Flexible PTO,,Y,,,No accrual
+E0118,CA Paid Sick Leave,66.25,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0119,US Flexible PTO,,Y,,,No accrual
+E0120,India Earned Leave,8.5,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0120,India Sick/Casual Leave,7,,days,2026-09-30,12 days/yr; no carry-forward
+E0121,UK Annual Leave,14,,days,2026-09-30,Holiday year Jan–Dec
+E0122,India Earned Leave,15,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0122,India Sick/Casual Leave,3.5,,days,2026-09-30,12 days/yr; no carry-forward
+E0123,US Flexible PTO,,Y,,,No accrual
+E0124,US Flexible PTO,,Y,,,No accrual
+E0124,CA Paid Sick Leave,43.25,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0125,UK Annual Leave,10,,days,2026-09-30,Holiday year Jan–Dec
+E0126,US Flexible PTO,,Y,,,No accrual
+E0126,CA Paid Sick Leave,62.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0127,India Earned Leave,3.5,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0127,India Sick/Casual Leave,3.5,,days,2026-09-30,12 days/yr; no carry-forward
+E0128,US Flexible PTO,,Y,,,No accrual
+E0128,CA Paid Sick Leave,45.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0129,US Hourly Vacation,65.25,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0129,TX Hourly Sick (company),20.25,,hrs,2026-10-03,Company policy; 40 hrs/yr
+E0130,US Flexible PTO,,Y,,,No accrual
+E0130,NY Paid Sick Leave,21.5,,hrs,2026-09-30,NY Labor Law 196-b; 56 hrs/yr
+E0131,India Earned Leave,1,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0131,India Sick/Casual Leave,1,,days,2026-09-30,12 days/yr; no carry-forward
+E0132,US Flexible PTO,,Y,,,No accrual
+E0133,US Flexible PTO,,Y,,,No accrual
+E0133,MA Earned Sick Time,13.25,,hrs,2026-09-30,MA ESTL; 40 hrs/yr
+E0134,US Hourly Vacation,93,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0134,CA Paid Sick Leave,74.25,,hrs,2026-10-03,CA Labor Code 246; accrual cap 80 hrs
+E0135,US Flexible PTO,,Y,,,No accrual
+E0135,IL Paid Leave for All Workers,35,,hrs,2026-09-30,IL PLAWA; 40 hrs/yr
+E0136,US Hourly Vacation,80.5,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0136,CA Paid Sick Leave,25.25,,hrs,2026-10-03,CA Labor Code 246; accrual cap 80 hrs
+E0137,India Earned Leave,9.5,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0137,India Sick/Casual Leave,6.5,,days,2026-09-30,12 days/yr; no carry-forward
+E0138,US Flexible PTO,,Y,,,No accrual
+E0138,CO Paid Sick Leave,33.5,,hrs,2026-09-30,CO HFWA; 48 hrs/yr
+E0139,US Flexible PTO,,Y,,,No accrual
+E0140,US Flexible PTO,,Y,,,No accrual
+E0140,CA Paid Sick Leave,55.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0141,US Flexible PTO,,Y,,,No accrual
+E0142,US Hourly Vacation,61.75,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0142,TX Hourly Sick (company),5.5,,hrs,2026-10-03,Company policy; 40 hrs/yr
+E0143,US Flexible PTO,,Y,,,No accrual
+E0143,CA Paid Sick Leave,29.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0144,US Flexible PTO,,Y,,,No accrual
+E0144,CA Paid Sick Leave,60,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0145,US Flexible PTO,,Y,,,No accrual
+E0145,CA Paid Sick Leave,60,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0146,US Flexible PTO,,Y,,,No accrual
+E0146,CA Paid Sick Leave,54.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0147,US Flexible PTO,,Y,,,No accrual
+E0147,CA Paid Sick Leave,76.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0149,US Flexible PTO,,Y,,,No accrual
+E0149,NY Paid Sick Leave,21,,hrs,2026-09-30,NY Labor Law 196-b; 56 hrs/yr; Accrual paused during unpaid leave
+E0150,India Earned Leave,4,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0150,India Sick/Casual Leave,0.5,,days,2026-09-30,12 days/yr; no carry-forward
+E0151,India Earned Leave,15.5,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0151,India Sick/Casual Leave,3.5,,days,2026-09-30,12 days/yr; no carry-forward
+E0152,US Flexible PTO,,Y,,,No accrual
+E0152,CA Paid Sick Leave,66.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0153,US Hourly Vacation,79.5,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0153,TX Hourly Sick (company),24,,hrs,2026-10-03,Company policy; 40 hrs/yr
+E0154,US Flexible PTO,,Y,,,No accrual
+E0155,UK Annual Leave,12,,days,2026-09-30,Holiday year Jan–Dec
+E0156,India Earned Leave,21.5,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0156,India Sick/Casual Leave,4,,days,2026-09-30,12 days/yr; no carry-forward
+E0157,US Flexible PTO,,Y,,,No accrual
+E0158,India Earned Leave,3,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0158,India Sick/Casual Leave,2,,days,2026-09-30,12 days/yr; no carry-forward
+E0159,US Flexible PTO,,Y,,,No accrual
+E0159,NY Paid Sick Leave,37,,hrs,2026-09-30,NY Labor Law 196-b; 56 hrs/yr
+E0160,US Flexible PTO,,Y,,,No accrual
+E0160,CA Paid Sick Leave,24.25,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0161,US Flexible PTO,,Y,,,No accrual
+E0162,US Flexible PTO,,Y,,,No accrual
+E0162,CA Paid Sick Leave,46.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0163,US Flexible PTO,,Y,,,No accrual
+E0163,CA Paid Sick Leave,52.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0164,US Flexible PTO,,Y,,,No accrual
+E0164,CA Paid Sick Leave,65.25,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0165,US Flexible PTO,,Y,,,No accrual
+E0166,India Earned Leave,0.5,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0166,India Sick/Casual Leave,0,,days,2026-09-30,12 days/yr; no carry-forward
+E0167,US Flexible PTO,,Y,,,No accrual
+E0167,CA Paid Sick Leave,69.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0168,US Flexible PTO,,Y,,,No accrual
+E0169,US Flexible PTO,,Y,,,No accrual
+E0169,CA Paid Sick Leave,57,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0170,US Hourly Vacation,74.25,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0170,CA Paid Sick Leave,30.5,,hrs,2026-10-03,CA Labor Code 246; accrual cap 80 hrs
+E0171,UK Annual Leave,3.5,,days,2026-09-30,Holiday year Jan–Dec
+E0172,India Earned Leave,9.5,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0172,India Sick/Casual Leave,3.5,,days,2026-09-30,12 days/yr; no carry-forward
+E0173,India Earned Leave,28.5,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0173,India Sick/Casual Leave,7.5,,days,2026-09-30,12 days/yr; no carry-forward
+E0174,US Flexible PTO,,Y,,,No accrual
+E0174,MA Earned Sick Time,19.25,,hrs,2026-09-30,MA ESTL; 40 hrs/yr
+E0175,UK Annual Leave,3,,days,2026-09-30,Holiday year Jan–Dec
+E0176,US Flexible PTO,,Y,,,No accrual
+E0176,CA Paid Sick Leave,34.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0177,US Flexible PTO,,Y,,,No accrual
+E0177,CA Paid Sick Leave,34,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0178,US Flexible PTO,,Y,,,No accrual
+E0178,NY Paid Sick Leave,19.5,,hrs,2026-09-30,NY Labor Law 196-b; 56 hrs/yr
+E0179,US Flexible PTO,,Y,,,No accrual
+E0179,CA Paid Sick Leave,59.25,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0180,US Hourly Vacation,19,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0180,TX Hourly Sick (company),31,,hrs,2026-10-03,Company policy; 40 hrs/yr
+E0181,US Flexible PTO,,Y,,,No accrual
+E0181,CA Paid Sick Leave,34.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0182,US Flexible PTO,,Y,,,No accrual
+E0182,CA Paid Sick Leave,37,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0183,US Flexible PTO,,Y,,,No accrual
+E0184,US Flexible PTO,,Y,,,No accrual
+E0184,CA Paid Sick Leave,79.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0185,US Flexible PTO,,Y,,,No accrual
+E0185,CA Paid Sick Leave,75.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0186,US Flexible PTO,,Y,,,No accrual
+E0186,CA Paid Sick Leave,25.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0187,US Flexible PTO,,Y,,,No accrual
+E0187,CO Paid Sick Leave,31.75,,hrs,2026-09-30,CO HFWA; 48 hrs/yr
+E0188,US Flexible PTO,,Y,,,No accrual
+E0188,IL Paid Leave for All Workers,28.25,,hrs,2026-09-30,IL PLAWA; 40 hrs/yr
+E0189,US Flexible PTO,,Y,,,No accrual
+E0190,US Flexible PTO,,Y,,,No accrual
+E0190,CA Paid Sick Leave,64,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0191,US Hourly Vacation,48,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0191,CA Paid Sick Leave,70.5,,hrs,2026-10-03,CA Labor Code 246; accrual cap 80 hrs
+E0192,UK Annual Leave,12.5,,days,2026-09-30,Holiday year Jan–Dec
+E0193,US Flexible PTO,,Y,,,No accrual
+E0194,US Flexible PTO,,Y,,,No accrual
+E0194,CA Paid Sick Leave,31,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0195,US Flexible PTO,,Y,,,No accrual
+E0195,CA Paid Sick Leave,69.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0196,US Flexible PTO,,Y,,,No accrual
+E0196,CA Paid Sick Leave,25.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0197,US Hourly Vacation,22.25,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0197,CA Paid Sick Leave,16.75,,hrs,2026-10-03,CA Labor Code 246; accrual cap 80 hrs
+E0198,UK Annual Leave,6,,days,2026-09-30,Holiday year Jan–Dec
+E0199,US Flexible PTO,,Y,,,No accrual
+E0199,CA Paid Sick Leave,26.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0200,US Flexible PTO,,Y,,,No accrual
+E0201,UK Annual Leave,12.5,,days,2026-09-30,Holiday year Jan–Dec
+E0202,US Flexible PTO,,Y,,,No accrual
+E0202,CA Paid Sick Leave,58.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0203,US Flexible PTO,,Y,,,No accrual; new hire
+E0203,CA Paid Sick Leave,0,,hrs,2026-09-30,Hired after balance date – no balance yet
+E0204,UK Annual Leave,5.5,,days,2026-09-30,Holiday year Jan–Dec
+E0205,US Flexible PTO,,Y,,,No accrual
+E0206,US Flexible PTO,,Y,,,No accrual
+E0206,CA Paid Sick Leave,75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0207,US Flexible PTO,,Y,,,No accrual
+E0208,India Earned Leave,9.5,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0208,India Sick/Casual Leave,7.5,,days,2026-09-30,12 days/yr; no carry-forward
+E0209,US Flexible PTO,,Y,,,No accrual
+E0209,CA Paid Sick Leave,35.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0210,India Earned Leave,2,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0210,India Sick/Casual Leave,5,,days,2026-09-30,12 days/yr; no carry-forward
+E0211,US Hourly Vacation,44.25,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0211,CA Paid Sick Leave,34,,hrs,2026-10-03,CA Labor Code 246; accrual cap 80 hrs
+E0212,US Hourly Vacation,42,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0212,TX Hourly Sick (company),27.5,,hrs,2026-10-03,Company policy; 40 hrs/yr
+E0213,US Flexible PTO,,Y,,,No accrual
+E0214,US Flexible PTO,,Y,,,No accrual
+E0214,CA Paid Sick Leave,50,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0215,US Flexible PTO,,Y,,,No accrual
+E0215,IL Paid Leave for All Workers,21,,hrs,2026-09-30,IL PLAWA; 40 hrs/yr
+E0216,UK Annual Leave,4.5,,days,2026-09-30,Holiday year Jan–Dec
+E0217,US Flexible PTO,,Y,,,No accrual
+E0217,CA Paid Sick Leave,65,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0218,US Flexible PTO,,Y,,,No accrual
+E0218,NY Paid Sick Leave,48.25,,hrs,2026-09-30,NY Labor Law 196-b; 56 hrs/yr
+E0219,US Flexible PTO,,Y,,,No accrual
+E0220,US Flexible PTO,,Y,,,No accrual
+E0221,US Flexible PTO,,Y,,,No accrual
+E0221,IL Paid Leave for All Workers,20.25,,hrs,2026-09-30,IL PLAWA; 40 hrs/yr
+E0222,US Flexible PTO,,Y,,,No accrual
+E0222,CA Paid Sick Leave,72.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0223,US Hourly Vacation,23.5,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0223,CA Paid Sick Leave,6.75,,hrs,2026-10-03,CA Labor Code 246; accrual cap 80 hrs
+E0224,UK Annual Leave,10.5,,days,2026-09-30,Holiday year Jan–Dec
+E0225,US Hourly Vacation,34.5,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0225,CA Paid Sick Leave,25,,hrs,2026-10-03,CA Labor Code 246; accrual cap 80 hrs
+E0226,US Flexible PTO,,Y,,,No accrual
+E0226,CA Paid Sick Leave,53.25,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0227,US Flexible PTO,,Y,,,No accrual
+E0228,US Hourly Vacation,42,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0228,CA Paid Sick Leave,42.5,,hrs,2026-10-03,CA Labor Code 246; accrual cap 80 hrs
+E0229,US Flexible PTO,,Y,,,No accrual
+E0230,US Flexible PTO,,Y,,,No accrual
+E0231,US Flexible PTO,,Y,,,No accrual
+E0231,CA Paid Sick Leave,75.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0232,US Hourly Vacation,35.25,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0232,TX Hourly Sick (company),19.5,,hrs,2026-10-03,Company policy; 40 hrs/yr
+E0233,US Flexible PTO,,Y,,,No accrual
+E0233,CA Paid Sick Leave,59,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0234,UK Annual Leave,13,,days,2026-09-30,Holiday year Jan–Dec
+E0235,US Flexible PTO,,Y,,,No accrual
+E0235,CA Paid Sick Leave,24,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs; Accrual paused during unpaid leave
+E0236,US Flexible PTO,,Y,,,No accrual
+E0236,CA Paid Sick Leave,50,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0237,US Hourly Vacation,28.25,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0237,TX Hourly Sick (company),39.25,,hrs,2026-10-03,Company policy; 40 hrs/yr
+E0238,US Flexible PTO,,Y,,,No accrual
+E0238,IL Paid Leave for All Workers,35,,hrs,2026-09-30,IL PLAWA; 40 hrs/yr
+E0239,India Earned Leave,10,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0239,India Sick/Casual Leave,8,,days,2026-09-30,12 days/yr; no carry-forward
+E0240,India Earned Leave,3,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0240,India Sick/Casual Leave,5.5,,days,2026-09-30,12 days/yr; no carry-forward
+E0241,US Flexible PTO,,Y,,,No accrual
+E0241,CA Paid Sick Leave,44.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0242,US Flexible PTO,,Y,,,No accrual
+E0242,CA Paid Sick Leave,29.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0243,UK Annual Leave,12,,days,2026-09-30,Holiday year Jan–Dec
+E0244,US Flexible PTO,,Y,,,No accrual
+E0245,US Flexible PTO,,Y,,,No accrual
+E0246,US Flexible PTO,,Y,,,No accrual
+E0247,US Flexible PTO,,Y,,,No accrual
+E0247,CA Paid Sick Leave,67.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0248,US Flexible PTO,,Y,,,No accrual
+E0249,US Flexible PTO,,Y,,,No accrual
+E0249,CA Paid Sick Leave,29.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0250,US Hourly Vacation,17.25,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0250,TX Hourly Sick (company),27.25,,hrs,2026-10-03,Company policy; 40 hrs/yr
+E0251,US Hourly Vacation,35.25,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0251,TX Hourly Sick (company),21,,hrs,2026-10-03,Company policy; 40 hrs/yr
+E0252,US Flexible PTO,,Y,,,No accrual
+E0252,CA Paid Sick Leave,66,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0253,US Hourly Vacation,32.25,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0253,TX Hourly Sick (company),5.5,,hrs,2026-10-03,Company policy; 40 hrs/yr
+E0254,India Earned Leave,18.5,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0254,India Sick/Casual Leave,5.5,,days,2026-09-30,12 days/yr; no carry-forward
+E0255,UK Annual Leave,1.5,,days,2026-09-30,Holiday year Jan–Dec
+E0256,US Flexible PTO,,Y,,,No accrual
+E0256,MA Earned Sick Time,15.25,,hrs,2026-09-30,MA ESTL; 40 hrs/yr
+E0257,US Flexible PTO,,Y,,,No accrual
+E0257,CA Paid Sick Leave,52.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0258,US Flexible PTO,,Y,,,No accrual
+E0258,NY Paid Sick Leave,17.25,,hrs,2026-09-30,NY Labor Law 196-b; 56 hrs/yr
+E0259,US Flexible PTO,,Y,,,No accrual
+E0260,US Flexible PTO,,Y,,,No accrual
+E0260,CA Paid Sick Leave,56,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0261,US Flexible PTO,,Y,,,No accrual
+E0262,US Flexible PTO,,Y,,,No accrual
+E0262,CA Paid Sick Leave,46,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0263,US Flexible PTO,,Y,,,No accrual
+E0263,CA Paid Sick Leave,60.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0264,US Flexible PTO,,Y,,,No accrual
+E0264,CA Paid Sick Leave,24.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0265,UK Annual Leave,4,,days,2026-09-30,Holiday year Jan–Dec
+E0266,US Flexible PTO,,Y,,,No accrual
+E0267,US Flexible PTO,,Y,,,No accrual
+E0267,CA Paid Sick Leave,30.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0268,US Flexible PTO,,Y,,,No accrual
+E0268,CA Paid Sick Leave,30.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0269,US Flexible PTO,,Y,,,No accrual
+E0270,US Flexible PTO,,Y,,,No accrual
+E0270,CA Paid Sick Leave,29,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0271,UK Annual Leave,8,,days,2026-09-30,Holiday year Jan–Dec
+E0272,US Flexible PTO,,Y,,,No accrual
+E0273,US Flexible PTO,,Y,,,No accrual
+E0273,CA Paid Sick Leave,39.25,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0274,US Hourly Vacation,27.5,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0274,CA Paid Sick Leave,35.5,,hrs,2026-10-03,CA Labor Code 246; accrual cap 80 hrs
+E0275,UK Annual Leave,8.5,,days,2026-09-30,Holiday year Jan–Dec
+E0276,US Hourly Vacation,21.5,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0276,TX Hourly Sick (company),4,,hrs,2026-10-03,Company policy; 40 hrs/yr
+E0277,UK Annual Leave,0,,days,2026-09-30,Holiday year Jan–Dec
+E0278,US Flexible PTO,,Y,,,No accrual
+E0278,MA Earned Sick Time,17.75,,hrs,2026-09-30,MA ESTL; 40 hrs/yr
+E0279,US Flexible PTO,,Y,,,No accrual
+E0280,US Flexible PTO,,Y,,,No accrual
+E0280,CA Paid Sick Leave,19.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs; Accrual paused during unpaid leave
+E0281,US Flexible PTO,,Y,,,No accrual
+E0281,IL Paid Leave for All Workers,22,,hrs,2026-09-30,IL PLAWA; 40 hrs/yr
+E0282,US Flexible PTO,,Y,,,No accrual
+E0282,CA Paid Sick Leave,36.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0283,US Flexible PTO,,Y,,,No accrual
+E0284,US Flexible PTO,,Y,,,No accrual
+E0284,CA Paid Sick Leave,40.25,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0285,US Flexible PTO,,Y,,,No accrual
+E0285,CA Paid Sick Leave,19,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0286,UK Annual Leave,0.5,,days,2026-09-30,Holiday year Jan–Dec
+E0287,US Flexible PTO,,Y,,,No accrual
+E0287,CA Paid Sick Leave,25,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0288,US Flexible PTO,,Y,,,No accrual
+E0289,US Flexible PTO,,Y,,,No accrual
+E0289,NY Paid Sick Leave,17.75,,hrs,2026-09-30,NY Labor Law 196-b; 56 hrs/yr
+E0290,US Hourly Vacation,20.75,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0290,TX Hourly Sick (company),9.25,,hrs,2026-10-03,Company policy; 40 hrs/yr
+E0291,India Earned Leave,10.5,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0291,India Sick/Casual Leave,1,,days,2026-09-30,12 days/yr; no carry-forward
+E0292,US Flexible PTO,,Y,,,No accrual
+E0292,CA Paid Sick Leave,40,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0293,US Flexible PTO,,Y,,,No accrual
+E0293,CA Paid Sick Leave,14.25,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0294,India Earned Leave,12.5,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0294,India Sick/Casual Leave,2.5,,days,2026-09-30,12 days/yr; no carry-forward
+E0295,US Flexible PTO,,Y,,,No accrual
+E0295,CA Paid Sick Leave,13.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0296,US Flexible PTO,,Y,,,No accrual
+E0297,US Flexible PTO,,Y,,,No accrual
+E0297,CA Paid Sick Leave,34.25,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0298,US Flexible PTO,,Y,,,No accrual
+E0298,CA Paid Sick Leave,12.25,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0299,US Flexible PTO,,Y,,,No accrual
+E0300,US Flexible PTO,,Y,,,No accrual
+E0300,CA Paid Sick Leave,26.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0301,US Flexible PTO,,Y,,,No accrual
+E0301,CA Paid Sick Leave,18,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0302,US Flexible PTO,,Y,,,No accrual
+E0302,NY Paid Sick Leave,12.5,,hrs,2026-09-30,NY Labor Law 196-b; 56 hrs/yr
+E0303,India Earned Leave,13,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0303,India Sick/Casual Leave,1.5,,days,2026-09-30,12 days/yr; no carry-forward
+E0304,US Flexible PTO,,Y,,,No accrual
+E0304,CA Paid Sick Leave,33,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0305,US Flexible PTO,,Y,,,No accrual
+E0305,CA Paid Sick Leave,28.25,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0306,US Flexible PTO,,Y,,,No accrual
+E0306,CA Paid Sick Leave,26.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0307,US Hourly Vacation,6.25,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0307,TX Hourly Sick (company),4,,hrs,2026-10-03,Company policy; 40 hrs/yr
+E0308,US Flexible PTO,,Y,,,No accrual
+E0308,CA Paid Sick Leave,20.5,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0309,India Earned Leave,5,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0309,India Sick/Casual Leave,3,,days,2026-09-30,12 days/yr; no carry-forward
+E0310,US Flexible PTO,,Y,,,No accrual
+E0311,US Flexible PTO,,Y,,,No accrual
+E0312,US Flexible PTO,,Y,,,No accrual
+E0312,CA Paid Sick Leave,26.25,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0313,US Flexible PTO,,Y,,,No accrual
+E0314,US Flexible PTO,,Y,,,No accrual
+E0314,CA Paid Sick Leave,24,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0315,US Flexible PTO,,Y,,,No accrual
+E0315,CA Paid Sick Leave,20,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0316,US Flexible PTO,,Y,,,No accrual
+E0317,US Flexible PTO,,Y,,,No accrual
+E0317,NY Paid Sick Leave,10,,hrs,2026-09-30,NY Labor Law 196-b; 56 hrs/yr
+E0318,US Flexible PTO,,Y,,,No accrual
+E0319,US Hourly Vacation,3,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0319,TX Hourly Sick (company),9.75,,hrs,2026-10-03,Company policy; 40 hrs/yr
+E0320,UK Annual Leave,6.5,,days,2026-09-30,Holiday year Jan–Dec
+E0321,US Flexible PTO,,Y,,,No accrual
+E0321,IL Paid Leave for All Workers,5.25,,hrs,2026-09-30,IL PLAWA; 40 hrs/yr
+E0322,US Hourly Vacation,9.75,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0322,TX Hourly Sick (company),1.25,,hrs,2026-10-03,Company policy; 40 hrs/yr
+E0323,US Flexible PTO,,Y,,,No accrual
+E0324,US Flexible PTO,,Y,,,No accrual
+E0324,CA Paid Sick Leave,15.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0325,US Flexible PTO,,Y,,,No accrual
+E0325,CA Paid Sick Leave,9.25,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0326,US Flexible PTO,,Y,,,No accrual
+E0326,CA Paid Sick Leave,14.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0327,US Flexible PTO,,Y,,,No accrual
+E0327,CA Paid Sick Leave,9.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0328,US Flexible PTO,,Y,,,No accrual
+E0328,IL Paid Leave for All Workers,6.25,,hrs,2026-09-30,IL PLAWA; 40 hrs/yr
+E0329,UK Annual Leave,2,,days,2026-09-30,Holiday year Jan–Dec
+E0330,India Earned Leave,3.5,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0330,India Sick/Casual Leave,0.5,,days,2026-09-30,12 days/yr; no carry-forward
+E0331,US Flexible PTO,,Y,,,No accrual
+E0331,MA Earned Sick Time,5.25,,hrs,2026-09-30,MA ESTL; 40 hrs/yr
+E0332,US Flexible PTO,,Y,,,No accrual
+E0332,CA Paid Sick Leave,5.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0333,US Hourly Vacation,4,,hrs,2026-10-03,Accrues per hour worked; cap 120 hrs
+E0333,TX Hourly Sick (company),3.5,,hrs,2026-10-03,Company policy; 40 hrs/yr
+E0334,US Flexible PTO,,Y,,,No accrual
+E0334,CA Paid Sick Leave,4.75,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0335,US Flexible PTO,,Y,,,No accrual
+E0335,CA Paid Sick Leave,7,,hrs,2026-09-30,CA Labor Code 246; accrual cap 80 hrs
+E0336,US Flexible PTO,,Y,,,No accrual
+E0337,UK Annual Leave,1,,days,2026-09-30,Holiday year Jan–Dec
+E0338,India Earned Leave,1,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0338,India Sick/Casual Leave,0,,days,2026-09-30,12 days/yr; no carry-forward
+E0339,India Earned Leave,0.5,,days,2026-09-30,Karnataka S&E Act; 1.5 days/month
+E0339,India Sick/Casual Leave,0.5,,days,2026-09-30,12 days/yr; no carry-forward
+E0340,UK Annual Leave,0.5,,days,2026-09-30,Holiday year Jan–Dec
+E0341,UK Annual Leave,0,,days,2026-09-30,Hired after balance date – no balance yet
+E0342,US Flexible PTO,,Y,,,No accrual; new hire
+E0343,US Flexible PTO,,Y,,,No accrual; new hire
+E0344,US Flexible PTO,,Y,,,No accrual; new hire
+E0345,US Flexible PTO,,Y,,,No accrual; new hire
+E0346,US Hourly Vacation,0,,hrs,2026-10-03,Hired after balance date – no balance yet
+E0346,TX Hourly Sick (company),0,,hrs,2026-10-03,Hired after balance date – no balance yet
+E0347,US Flexible PTO,,Y,,,No accrual; new hire
+E0348,US Hourly Vacation,0,,hrs,2026-10-03,Hired after balance date – no balance yet
+E0348,TX Hourly Sick (company),0,,hrs,2026-10-03,Hired after balance date – no balance yet
+E0349,US Flexible PTO,,Y,,,No accrual; new hire
+E0350,Canada Vacation,8.5,,days,2026-09-30,"Ontario, 3 weeks/year"
+E0350,Canada Sick Leave,6,,days,2026-09-30,Company plan 10 days/yr (Ontario ESA: 3 unpaid sick days)
+E0351,Canada Vacation,11,,days,2026-09-30,"Ontario, 3 weeks/year"
+E0351,Canada Sick Leave,7.5,,days,2026-09-30,Company plan 10 days/yr (Ontario ESA: 3 unpaid sick days)
+E0352,Canada Vacation,12.5,,days,2026-09-30,"British Columbia, 3 weeks/year"
+E0352,Canada Sick Leave,8,,days,2026-09-30,Company plan 10 days/yr (meets BC 5 paid sick days)
+E0353,Canada Vacation,6,,days,2026-09-30,"British Columbia, 3 weeks/year"
+E0353,Canada Sick Leave,5,,days,2026-09-30,Company plan 10 days/yr (meets BC 5 paid sick days)
+E0354,Canada Vacation,7.5,,days,2026-09-30,"Quebec, 3 weeks/year"
+E0354,Canada Sick Leave,6.5,,days,2026-09-30,Company plan 10 days/yr (meets Quebec 2 paid sick days)
+E0355,Canada Vacation,13,,days,2026-09-30,"Ontario, 3 weeks/year"
+E0355,Canada Sick Leave,9,,days,2026-09-30,Company plan 10 days/yr (Ontario ESA: 3 unpaid sick days)
+E0356,Canada Vacation,4.5,,days,2026-09-30,"Ontario, 3 weeks/year"
+E0356,Canada Sick Leave,3.5,,days,2026-09-30,Company plan 10 days/yr (Ontario ESA: 3 unpaid sick days)
+E0357,Canada Vacation,0,,days,2026-09-30,Hired after balance date – no balance yet
+E0357,Canada Sick Leave,0,,days,2026-09-30,Hired after balance date – no balance yet
+E0358,Canada Vacation,10,,days,2026-09-30,"Ontario, 3 weeks/year"
+E0358,Canada Sick Leave,7,,days,2026-09-30,Company plan 10 days/yr (Ontario ESA: 3 unpaid sick days)
+E0359,Canada Vacation,14,,days,2026-09-30,"British Columbia, 3 weeks/year"
+E0359,Canada Sick Leave,8.5,,days,2026-09-30,Company plan 10 days/yr (meets BC 5 paid sick days)
+E0360,Canada Vacation,5.5,,days,2026-09-30,"British Columbia, 3 weeks/year"
+E0360,Canada Sick Leave,4,,days,2026-09-30,Company plan 10 days/yr (meets BC 5 paid sick days)
+E0361,Canada Vacation,9.5,,days,2026-09-30,"Quebec, 3 weeks/year"
+E0361,Canada Sick Leave,10,,days,2026-09-30,Company plan 10 days/yr (meets Quebec 2 paid sick days)
+E0362,Canada Vacation,3,,days,2026-09-30,"Ontario, 3 weeks/year"
+E0362,Canada Sick Leave,2.5,,days,2026-09-30,Company plan 10 days/yr (Ontario ESA: 3 unpaid sick days)
+E0363,Canada Vacation,12,,days,2026-09-30,"Ontario, 3 weeks/year"
+E0363,Canada Sick Leave,9.5,,days,2026-09-30,Company plan 10 days/yr (Ontario ESA: 3 unpaid sick days)
+E0364,Canada Vacation,0,,days,2026-09-30,Hired after balance date – no balance yet
+E0364,Canada Sick Leave,0,,days,2026-09-30,Hired after balance date – no balance yet
+E0365,Canada Vacation,9,,days,2026-09-30,"Ontario, 3 weeks/year"
+E0365,Canada Sick Leave,6,,days,2026-09-30,Company plan 10 days/yr (Ontario ESA: 3 unpaid sick days)
+E0366,Canada Vacation,4,,days,2026-09-30,"Ontario, 3 weeks/year"
+E0366,Canada Sick Leave,3,,days,2026-09-30,Company plan 10 days/yr (Ontario ESA: 3 unpaid sick days)
+E0367,Canada Vacation,11.5,,days,2026-09-30,"Quebec, 3 weeks/year"
+E0367,Canada Sick Leave,7,,days,2026-09-30,Company plan 10 days/yr (meets Quebec 2 paid sick days)
+E0368,Canada Vacation,7,,days,2026-09-30,"British Columbia, 3 weeks/year"
+E0368,Canada Sick Leave,5.5,,days,2026-09-30,Company plan 10 days/yr (meets BC 5 paid sick days)
+E0369,Canada Vacation,13.5,,days,2026-09-30,"Ontario, 3 weeks/year"
+E0369,Canada Sick Leave,8,,days,2026-09-30,Company plan 10 days/yr (Ontario ESA: 3 unpaid sick days)
+E0370,Canada Vacation,0,,days,2026-09-30,Hired after balance date – no balance yet
+E0370,Canada Sick Leave,0,,days,2026-09-30,Hired after balance date – no balance yet
+E0371,Canada Vacation,10.5,,days,2026-09-30,"Ontario, 3 weeks/year"
+E0371,Canada Sick Leave,7.5,,days,2026-09-30,Company plan 10 days/yr (Ontario ESA: 3 unpaid sick days)
+E0372,Canada Vacation,6.5,,days,2026-09-30,"Ontario, 3 weeks/year"
+E0372,Canada Sick Leave,5,,days,2026-09-30,Company plan 10 days/yr (Ontario ESA: 3 unpaid sick days)
+E0373,Canada Vacation,15,,days,2026-09-30,"British Columbia, 3 weeks/year"
+E0373,Canada Sick Leave,9,,days,2026-09-30,Company plan 10 days/yr (meets BC 5 paid sick days)
+E0374,Canada Vacation,5,,days,2026-09-30,"Quebec, 3 weeks/year"
+E0374,Canada Sick Leave,4,,days,2026-09-30,Company plan 10 days/yr (meets Quebec 2 paid sick days)

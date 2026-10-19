@@ -1,0 +1,6 @@
+pay_group,country,frequency,period_start,period_end,pay_date_original
+US Semi-monthly,US,Semi-monthly,2026-10-16,2026-10-31,2026-10-27
+UK Monthly,UK,Monthly,2026-10-01,2026-10-31,2026-10-25
+Canada Monthly,CA,Monthly,2026-10-01,2026-10-31,2026-10-25
+India Monthly,IN,Monthly,2026-10-01,2026-10-31,2026-10-25
+US Biweekly,US,Bi-weekly,2026-10-04,2026-10-17,2026-10-23
