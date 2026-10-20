@@ -2,7 +2,7 @@
 
 A web app that runs one pay period of payroll, time and absence for NeoCloud (375 employees, 30 contractors, 5 pay groups). It calculates US payroll, ingests and reconciles the international vendor registers, reconciles headcount and the legacy Rippling register, and produces a validated NetSuite journal.
 
-- **Live app:** `[https://neocloud-payroll-mika.vercel.app/]` 
+- **Live app:** `https://<your-project>.vercel.app` (replace after deploying)
 - **Architecture decisions:** [docs/ARCHITECTURE_DECISIONS.md](docs/ARCHITECTURE_DECISIONS.md)
 - **Design document and reconciliation memo:** submitted separately (PDF)
 
@@ -11,8 +11,8 @@ A web app that runs one pay period of payroll, time and absence for NeoCloud (37
 | Payroll status grid: every pay group × 7 stages (preparing inputs → processing → audits → sign-off → complete → settlement → closed), with sign-off and close actions; period totals and burdened cost by department and location | Dashboard |
 | Pay runs per pay group: paid full / prorated / active-not-paid, plus special instructions | Pay runs & headcount |
 | US gross-to-net for both US pay groups, per employee and per pay component; branded, printable payslip | Payroll register, Payslip |
-| Enter a worker ID: earnings / deductions / taxes, employer costs, time cards, pay inputs and the debit/credit accounting for that worker | Payroll results |
-| Non-exempt time: regular, OT, DT, 7th day, night/shift differential, meal penalty, with a day-by-day CA rule trace; hover an exception count to see why | Time results |
+| Enter a worker ID: earnings / deductions / taxes, employer costs, **Time results** (regular, OT, DT, 7th day, night/shift differential, meal penalty with the day-by-day CA rule trace), **Time cards** (punches exactly as captured, no calculation), pay inputs and the debit/credit accounting for that worker | Payroll results |
+| Non-exempt time for all workers: raw time cards (every punch as captured, several per day where they exist, nothing calculated), every time exception and how it was handled, and the time entry template validations; click a row to open that worker's Time cards and Time results | Time cards |
 | Absence balances for every country, accruals, payouts, leave liability | Absence & payouts |
 | UK / India / Canada: vendor results reconciled to what Workday sent, employer cost in local currency and USD | International |
 | **Headcount roll-forward** per US pay run (last run + joiners − leavers = this run; less unpaid leave and no time = to be paid, tied to the register), deterministic checks vs the prior period, and **AI commentary with guardrails** | Pre-payroll audit (AI) |
@@ -49,12 +49,18 @@ Older Node, or no Node at all? Open `dist/standalone.html` (attached to the repo
 ## Run the tests
 
 ```bash
-npm test
+npm test                                   # all test files
+node --test tests/second-meal.test.ts      # one file
 ```
 
-52 tests (Node's built-in test runner, no dependencies) cover:
+| Test file | What it covers |
+| --- | --- |
+| `tests/engine.test.ts` | The whole engine end to end on the dataset (52 tests, listed below) |
+| `tests/second-meal.test.ts` | CA second meal period: a shift over 12 hours pays a meal premium that can't be waived (E0049, E0228); still max one premium a day (E0021); no premium at 12 hours or less, or outside CA (4 tests) |
 
-- **Overtime:** CA daily OT and double time, 7th consecutive day, weekly OT without pyramiding, TX weekly-only, OT at base + 0.5 × weighted regular rate, overnight shifts, differentials not stacking, meal penalties, punch cleaning, retro time.
+56 tests in total (Node's built-in test runner, no dependencies) cover:
+
+- **Overtime:** CA daily OT and double time, 7th consecutive day, weekly OT without pyramiding, TX weekly-only, OT at base + 0.5 × weighted regular rate, overnight shifts, differentials not stacking, meal penalties (late, missed/waived attestation, no second meal over 12 hours), punch cleaning, retro time.
 - **Proration:** mid-period hire, termination, unpaid leave, late-entered comp change (retro), state-to-state split, and an edit-and-re-run case.
 - **Termination payouts:** US hourly vacation payout, international daily-rate payout, sick forfeiture.
 - Taxes and wage bases, 401(k) and Section 125, garnishment limits, benefit arrears.
@@ -64,6 +70,14 @@ npm test
 - Payroll status stages.
 
 ## How the data loads
+
+**Source files** (in [`source/`](source/), as provided with the exercise):
+
+- `Worker File dataset.xlsx` – workers, absence balances, payroll inputs, employee events, timesheets, pay groups and schedule, shift codes, shift roster
+- `Overtime rules.xlsx` – time calculation groups (CA / non-CA), differentials, meal penalty, duplicate punches
+- `Supplemental Tax rate and Benefit ded.xlsx` – employer tax rates, international employer costs, FX rates, benefits load
+
+`npm run data` exports the worker file's sheets to the CSVs below. The two rules workbooks are captured in `data/rules.json`.
 
 All inputs are CSV files in [`data/`](data/). The app loads them at start-up (the build also embeds them in `data.bundle.js` so the single-file version works offline). Editable files can be changed on **Edit data & re-run**; changes stay in that browser and can be reset.
 
@@ -79,6 +93,17 @@ All inputs are CSV files in [`data/`](data/). The app loads them at start-up (th
 - the **prior-period register** from this period's data with standard time at straight pay, no bonuses or time off, same 401(k)/health elections;
 - the **legacy Rippling register** by re-running the engine with 12 planted differences (3 each: legacy error, configuration difference, timing, data; across both US pay groups), each with a root cause and disposition;
 - the **UK / India / Canada vendor registers**, standing in for the vendor's file: one row per worker, a company column, one column per pay code. They carry every result the vendor calculates (earnings, employee taxes and deductions, net pay, employer statutory cost, employer-paid benefits at 5%) with the brief's rules applied and illustrative employee rates, plus 6 planted variances.
+
+### Test files for the international journal upload
+
+[`test-files/provider-registers/`](test-files/provider-registers/) holds the provider registers to upload on **Close → Export payroll journal → International**:
+
+| File | Use it to test | Expected result |
+| --- | --- | --- |
+| `UK payroll register Oct 2026.csv` | One country, clean | Validates, transposes and maps; the NetSuite preview balances for NeoCloud UK Ltd (GBP) |
+| `Canada payroll register Oct 2026.csv`, `India payroll register Oct 2026.csv` | The other two countries | Same, for NeoCloud Canada Inc. (CAD) and NeoCloud India Pvt Ltd (INR) |
+| `All companies payroll register Oct 2026.csv` | One file for all three countries | Rows are routed by the `company` column; one journal per subsidiary |
+| `UK payroll register Oct 2026 - with unmapped code.csv` | A pay code with no posting rule (`CAR_ALLOW`) | Export blocked and the unmapped code flagged; no journal is produced until a rule is added in Setup → GL mapping |
 
 ## Project layout
 
@@ -152,6 +177,8 @@ I built this with Claude (Anthropic) in the Claude desktop app (Cowork). I worke
 - Listed a removed duplicate punch twice (as the exception and again as "dropped"), so counts were doubled.
 - One test priced a retro OT half-hour at base rate instead of the regular rate (the engine was right, the test was wrong).
 - A UI helper appended `null` into the page on two screens; caught by a headless render of every screen.
+- Table search boxes typed backwards: each keystroke re-rendered the table and put the cursor back at the start. Fixed by restoring the cursor position after each re-render.
+- The CA meal rule missed the second meal period: a shift over 12 hours with one meal paid no premium. Added (it can't be waived), with its own test file.
 
 **What I changed from what the AI first produced:**
 
@@ -162,6 +189,8 @@ I built this with Claude (Anthropic) in the Claude desktop app (Cowork). I worke
 - **Data.** The AI worked from an older copy of the worker file (Canada showed one employee); I pointed it to the latest.
 - **Pre-payroll audit.** I extended it into the headcount roll-forward a payroll specialist uses to confirm who is paid, and renamed it.
 - **Parallel run.** I separated the one-period reconciliation in the app (Payroll parallel test) from the four-run parallel plan, which belongs in the design document.
+- **Time screens.** I split time into what was captured and what was calculated: a **Time cards** screen with every worker's raw punches, exceptions and template validations; and, per worker under Payroll results, a **Time results** tab (rule trace, no pay amounts) and a **Time cards** tab (punches as captured).
+- **Swing shift.** The dataset lists a $1.50 swing differential; I decided swing earns no extra pay.
 - **Framework.** The AI planned Next.js; the build environment could not reach the npm registry, so it switched to a zero-dependency TypeScript build. I reviewed and accepted that trade-off.
 
 The full list of decisions, and who made each, is in [docs/ARCHITECTURE_DECISIONS.md](docs/ARCHITECTURE_DECISIONS.md).
