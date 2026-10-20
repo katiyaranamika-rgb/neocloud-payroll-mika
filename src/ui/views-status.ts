@@ -68,7 +68,7 @@ function detail(r: PayGroupStatus, s: Stage, redraw: () => void): HTMLElement {
   } else if (s.action === 'resolve' && s.items.length) {
     action = h('p', null, h('a', { href: isUs ? '#/audit' : '#/intl' }, isUs ? 'Resolve findings on the Pre-payroll audit (AI) screen →' : 'Resolve provider variances on the International screen →'));
   } else if (r.payGroup === 'US Biweekly' && s.index === 0 && s.items.length) {
-    action = h('p', null, h('a', { href: '#/time' }, 'Review time on the Time results screen →'));
+    action = h('p', null, h('a', { href: '#/results' }, 'Review time under Payroll results → Time results →'));
   }
   return h('div', { class: 'stage-detail' },
     h('div', { class: 'subhead' },

@@ -1,5 +1,5 @@
 // Payroll results for ONE worker: enter a worker ID and the tabs populate with that worker's
-// earnings / deductions / taxes, employer costs, time cards, pay inputs and payroll accounting.
+// earnings / deductions / taxes, employer costs, time results, time cards, pay inputs and payroll accounting.
 
 import { h, kpi, card, section, table, fmtMoney, fmtNum, badge, tabs } from './dom.ts';
 import { state, passes } from './state.ts';
@@ -8,6 +8,7 @@ import type { RegisterRow, PayLine } from '../engine/types.ts';
 import { round2 } from '../engine/dates.ts';
 import { displayName } from './brand.ts';
 import { workerCompany, rulesForCompany, resultLines } from '../engine/prism.ts';
+import { traceCard, exceptions } from './views-time.ts';
 
 
 let workerSel = '';
@@ -93,42 +94,43 @@ function tabEmployer(): HTMLElement {
   );
 }
 
-function tabTimecards(): HTMLElement {
+const notHourly = () => card(null, h('p', null, `${workerSel} is exempt and salaried (US Semi-monthly): no time is captured or calculated. Time off is listed under Pay inputs.`));
+
+/** Time results: the time calculation applied to this worker's punches (hours by category, rule trace, pay components). */
+function tabTimeResults(): HTMLElement {
   const R = state.result;
-  const ps = R.model.schedules.get('US Biweekly')!;
-  if (state.result.model.workerById.get(workerSel)?.payGroup !== 'US Biweekly') return card(null, h('p', null, `${workerSel} is exempt and salaried (US Semi-monthly): no time cards. Time off is listed under Pay inputs.`));
-  // Re-apply the cleaning rules to label every entry (paid, duplicate, after termination, retro).
-  const seen = new Set<string>();
-  const list = R.model.timesheets.filter(t => t.workerId === workerSel).map(t => {
-    const w = R.model.workerById.get(t.workerId)!;
-    const key = [t.workerId, t.date, t.timeIn, t.timeOut, t.mealStart, t.mealEnd].join('|');
-    let status = 'Paid';
-    if (t.payPeriod === 'Prior period') status = 'Retro (prior period)';
-    else if (seen.has(key)) status = 'Duplicate – not paid';
-    else if (w.termDate && t.date > w.termDate) status = 'After termination – not paid';
-    else if (t.date < ps.start || t.date > ps.end) status = 'Outside period';
-    seen.add(key);
-    const day = R.time.get(t.workerId)?.days.find(d => d.date === t.date);
-    return { ...t, status, hours: day && status === 'Paid' ? day.hours : null, ot: day && status === 'Paid' ? day.ot + day.dt + day.svd15 + day.svd20 : null, flags: day && status === 'Paid' ? day.flags.join('; ') : '' };
-  });
-  const paidHours = list.reduce((s, t) => s + (t.hours ?? 0), 0);
+  if (R.model.workerById.get(workerSel)?.payGroup !== 'US Biweekly') return notHourly();
+  const t = R.time.get(workerSel);
+  if (!t) return card(null, h('p', null, `${workerSel} has no time entered for Oct 4–17.`));
+  const sum = (k: 'reg' | 'ot' | 'dt' | 'svd15' | 'svd20' | 'nightHours') => t.days.reduce((s, d) => s + d[k], 0);
+  const ex = exceptions(t);
   return h('div', null,
     h('div', { class: 'kpis' },
-      kpi('Time entries', String(list.length), `${ps.start} to ${ps.end} (+ retro rows)`),
-      kpi('Paid hours', fmtNum(paidHours)),
-      kpi('Not paid', String(list.filter(t => /not paid/.test(t.status)).length), 'Duplicates, after termination'),
-      kpi('Retro rows', String(list.filter(t => t.status.startsWith('Retro')).length)),
+      kpi('Regular hrs', fmtNum(sum('reg'))), kpi('OT 1.5x hrs', fmtNum(sum('ot'))), kpi('DT 2x hrs', fmtNum(sum('dt'))),
+      kpi('7th-day hrs', fmtNum(sum('svd15') + sum('svd20'))), kpi('Night hrs', fmtNum(sum('nightHours'))),
+      kpi('Meal penalties', String(t.days.filter(d => d.mealPenalty).length), t.group),
     ),
-    card('Time cards in the period', table(list, [
-      { key: 'workerId', label: 'Worker' }, { key: 'date', label: 'Date' }, { key: 'shiftCode', label: 'Shift' },
-      { key: 'timeIn', label: 'In' }, { key: 'timeOut', label: 'Out' },
-      { key: 'meal', label: 'Meal', value: t => (t.mealStart ? `${t.mealStart}–${t.mealEnd}` : t.mealAttestation ? `none (${t.mealAttestation})` : 'none') },
-      { key: 'hours', label: 'Hours', align: 'right', render: t => (t.hours !== null ? fmtNum(t.hours) : '') },
-      { key: 'ot', label: 'Premium hrs', align: 'right', render: t => (t.ot ? fmtNum(t.ot) : '') },
-      { key: 'entryType', label: 'Entry type' },
-      { key: 'status', label: 'Status', render: t => badge(t.status, t.status === 'Paid' ? 'ok' : t.status.startsWith('Retro') ? 'info' : 'warn') },
-      { key: 'flags', label: 'Rule notes', render: t => h('span', { class: 'small' }, t.flags || t.notes) },
-    ], { csvName: 'time-cards.csv', pageSize: 60, onRow: t => go('time', t.workerId) })),
+    traceCard(t),
+    card('Exceptions and how they were handled', table(ex, [{ key: 'code', label: 'Exception' }, { key: 'msg', label: 'Handling' }], { search: false, empty: 'No exceptions' })),
+  );
+}
+
+/** Time cards: punches exactly as captured in the timesheet file – no time calculation, cleaning or status applied. */
+function tabTimecards(): HTMLElement {
+  const R = state.result;
+  if (R.model.workerById.get(workerSel)?.payGroup !== 'US Biweekly') return notHourly();
+  const DOW = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const list = R.model.timesheets.filter(t => t.workerId === workerSel).sort((a, b) => a.idx - b.idx);
+  return h('div', null,
+    h('p', { class: 'muted small' }, 'Punches as captured, in entry order. Nothing is calculated, rounded, removed or held here — see Time results for how each punch was treated.'),
+    card(`Time cards · ${list.length} entr${list.length === 1 ? 'y' : 'ies'}`, table(list, [
+      { key: 'date', label: 'Work date' }, { key: 'day', label: 'Day', value: t => DOW[new Date(t.date + 'T00:00:00Z').getUTCDay()] },
+      { key: 'shiftCode', label: 'Shift code' },
+      { key: 'timeIn', label: 'Clock in' }, { key: 'mealStart', label: 'Meal out', value: t => t.mealStart || '—' },
+      { key: 'mealEnd', label: 'Meal in', value: t => t.mealEnd || '—' }, { key: 'timeOut', label: 'Clock out' },
+      { key: 'entryType', label: 'Entry type' }, { key: 'enteredOn', label: 'Entered on' }, { key: 'payPeriod', label: 'Pay period' },
+      { key: 'notes', label: 'Source note', render: t => h('span', { class: 'small' }, t.notes) },
+    ], { search: false, csvName: `time-cards-${workerSel}.csv`, pageSize: 60, empty: 'No punches captured' })),
   );
 }
 
@@ -212,7 +214,7 @@ function tabAccounting(): HTMLElement {
   );
 }
 
-export function viewResults(arg?: string): HTMLElement {
+export function viewResults(arg?: string, initialTab?: string): HTMLElement {
   const R = state.result;
   const us = R.register.filter(r => r.bucket !== 'Excluded' && passes(r));
   if (arg !== undefined) workerSel = arg.toUpperCase();
@@ -224,7 +226,7 @@ export function viewResults(arg?: string): HTMLElement {
     h('datalist', { id: 'worker-ids' }, us.map(r => h('option', { value: r.workerId }, `${displayName(r.workerId)} · ${r.payGroup} · ${r.costCenter}`))),
     h('button', { class: 'btn', onClick: () => open((input as HTMLInputElement).value) }, 'Show results'),
     h('span', { class: 'muted small' }, 'Try: ', ...['E0017', 'E0021', 'E0002', 'E0028', 'E0149'].filter(id => us.some(r => r.workerId === id)).flatMap((id, i) => [i ? ', ' : '', h('a', { href: `#/results/${id}` }, id)])));
-  const head = section('Payroll results by worker', 'Enter a worker ID to see everything applied to that worker this period: earnings, deductions and taxes; employer costs; time cards; pay inputs; and the debit/credit accounting.');
+  const head = section('Payroll results by worker', 'Enter a worker ID to see everything applied to that worker this period: earnings, deductions and taxes; employer costs; time results (calculated) and time cards (punches as captured); pay inputs; and the debit/credit accounting.');
   if (state.filters.payGroup && !state.filters.payGroup.startsWith('US')) return h('div', null, head, card(null, h('p', null, `${state.filters.payGroup} is paid by the in-country provider; worker results are on the `, h('a', { href: '#/intl' }, 'International'), ' screen. Clear the pay group filter or pick a US pay group.')));
   if (!workerSel) return h('div', null, head, picker, card(null, h('p', { class: 'muted' }, `No worker selected yet. ${us.length} workers available${state.filters.payGroup ? ' in ' + state.filters.payGroup : ''}.`)));
   if (!valid) return h('div', null, head, picker, card(null, h('p', null, badge('Not found', 'warn'), ` ${workerSel} is not in a US pay run this period${state.filters.payGroup || state.filters.dept || state.filters.location ? ' (or is hidden by the pay group, department or location filter)' : ''}. International workers are on the International screen; contractors are not paid through payroll.`)));
@@ -238,9 +240,10 @@ export function viewResults(arg?: string): HTMLElement {
     tabs([
       { id: 'earn', label: 'Earnings, deductions & taxes', render: tabEarnings },
       { id: 'er', label: 'Other: employer costs', render: tabEmployer },
-      { id: 'time', label: 'Time cards', render: tabTimecards },
+      { id: 'timeres', label: 'Time results', render: tabTimeResults },
+      { id: 'cards', label: 'Time cards', render: tabTimecards },
       { id: 'inputs', label: 'Pay inputs', render: tabInputs },
       { id: 'acct', label: 'Payroll accounting', render: tabAccounting },
-    ]),
+    ], initialTab),
   );
 }

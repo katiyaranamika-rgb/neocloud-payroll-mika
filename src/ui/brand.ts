@@ -29,6 +29,7 @@ const ICONS: Record<string, string> = {
   register: '<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/>',
   results: '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
   payslip: '<path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M9 12h6M9 16h4"/>',
+  timecards: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>',
   time: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>',
   absence: '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
   intl: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/>',

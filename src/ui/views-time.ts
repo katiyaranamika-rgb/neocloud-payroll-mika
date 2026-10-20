@@ -7,42 +7,45 @@ import type { TimeResult, AbsenceRow } from '../engine/types.ts';
 import { displayName } from './brand.ts';
 
 /** One entry per exception: issues, plus dropped entries not already explained by an issue on the same date. */
-function exceptions(t: TimeResult): { code: string; msg: string }[] {
+export function exceptions(t: TimeResult): { code: string; msg: string }[] {
   const out = t.issues.map(i => ({ code: i.code, msg: i.message }));
   for (const d of t.dropped) if (!t.issues.some(i => i.message.includes(d.date))) out.push({ code: 'DROPPED', msg: `${d.date}: ${d.reason}` });
   return out;
 }
 
-export function viewTime(arg?: string): HTMLElement {
+export function viewTime(): HTMLElement {
   const R = state.result;
   const list = [...R.time.values()].filter(t => passes(R.model.workerById.get(t.workerId)!));
   const sum = (t: TimeResult, k: 'reg' | 'ot' | 'dt' | 'svd15' | 'svd20' | 'nightHours') => t.days.reduce((s, d) => s + d[k], 0);
-  const amt = (t: TimeResult) => t.lines.reduce((s, l) => s + l.amount, 0);
   const tot = (k: 'reg' | 'ot' | 'dt' | 'svd15' | 'svd20' | 'nightHours') => list.reduce((s, t) => s + sum(t, k), 0);
-  const detail = arg ? R.time.get(arg) : undefined;
+  // Raw punches as captured (all US Biweekly workers in the filters), in worker / date / entry order.
+  const DOW = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const punches = R.model.timesheets.filter(t => { const w = R.model.workerById.get(t.workerId); return !!w && passes(w); })
+    .sort((a, b) => a.workerId.localeCompare(b.workerId) || a.date.localeCompare(b.date) || a.idx - b.idx);
+  const perDay = new Map<string, number>();
+  for (const t of punches) perDay.set(`${t.workerId}|${t.date}`, (perDay.get(`${t.workerId}|${t.date}`) ?? 0) + 1);
 
   return h('div', null,
-    section('Time results (non-exempt, US Biweekly Oct 4–17)', 'Hours by category for every timesheet, with the California rule trace. Order: clean punches → daily hours → CA daily OT/DT → 7th day → weekly OT → differentials → meal penalties → regular rate → premiums.'),
+    section('Time cards (non-exempt, US Biweekly Oct 4–17)', 'All workers\' raw time cards for the period (every punch as captured), every exception and how it was handled, and the time entry template validations that would prevent them. Click a row to open that worker under Payroll results.'),
     h('div', { class: 'kpis' },
       kpi('Workers', String(list.length), `${list.filter(t => t.group === 'US California Non-Exempt').length} CA · ${list.filter(t => t.group !== 'US California Non-Exempt').length} non-CA`),
       kpi('Regular hrs', fmtNum(tot('reg'))), kpi('OT 1.5x hrs', fmtNum(tot('ot'))), kpi('DT 2x hrs', fmtNum(tot('dt'))),
       kpi('7th-day hrs', fmtNum(tot('svd15') + tot('svd20'))), kpi('Night hrs', fmtNum(tot('nightHours'))),
       kpi('Meal penalties', String(list.reduce((s, t) => s + t.days.filter(d => d.mealPenalty).length, 0))),
     ),
-    detail ? traceCard(detail) : null,
-    card('Hours by category → pay components', table(list, [
-      { key: 'workerId', label: 'Worker' }, { key: 'name', label: 'Name', value: t => displayName(t.workerId) }, { key: 'group', label: 'Time calc group', value: t => t.group.replace(' Non-Exempt', '') },
-      { key: 'days', label: 'Days', align: 'right', value: t => t.days.length },
-      { key: 'reg', label: 'REG_HRS', align: 'right', value: t => sum(t, 'reg'), render: t => fmtNum(sum(t, 'reg')) },
-      { key: 'ot', label: 'OT_15', align: 'right', value: t => sum(t, 'ot'), render: t => fmtNum(sum(t, 'ot')) },
-      { key: 'dt', label: 'DT_20', align: 'right', value: t => sum(t, 'dt'), render: t => fmtNum(sum(t, 'dt')) },
-      { key: 's7', label: 'SVD_15/20', align: 'right', value: t => sum(t, 'svd15') + sum(t, 'svd20'), render: t => fmtNum(sum(t, 'svd15') + sum(t, 'svd20')) },
-      { key: 'night', label: 'Night hrs', align: 'right', value: t => sum(t, 'nightHours'), render: t => fmtNum(sum(t, 'nightHours')) },
-      { key: 'meal', label: 'MEAL_PEN', align: 'right', value: t => t.days.filter(d => d.mealPenalty).length },
-      { key: 'rr', label: 'Reg. rate wk1 / wk2', value: t => t.weeks.map(w => fmtNum(w.regularRate, 2)).join(' / ') },
-      { key: 'amt', label: 'Time pay', align: 'right', value: amt, render: t => fmtMoney(amt(t)) },
-      { key: 'flags', label: 'Exceptions', value: t => exceptions(t).length, render: t => { const items = exceptions(t).map(x => `${x.code}: ${x.msg}`); return items.length ? withTip(badge(String(items.length), 'warn'), `${t.workerId} · ${items.length} exception${items.length > 1 ? 's' : ''}`, items) : ''; } },
-    ], { onRow: t => go('time', t.workerId), csvName: 'time-results.csv', pageSize: 60 })),
+    card(`Time cards · punches as captured · ${punches.length} entries`, h('div', null,
+      h('p', { class: 'muted small' }, 'Raw timesheet data exactly as captured, one row per time entry — a worker can have several entries on the same day (split shifts, duplicates, manual entries, prior-period corrections). Nothing is calculated, removed or held here; click a row to open that worker\'s Time cards and Time results under Payroll results.'),
+      table(punches, [
+        { key: 'workerId', label: 'Worker' }, { key: 'name', label: 'Name', value: t => displayName(t.workerId) },
+        { key: 'date', label: 'Work date' }, { key: 'day', label: 'Day', value: t => DOW[new Date(t.date + 'T00:00:00Z').getUTCDay()] },
+        { key: 'perDay', label: 'Entries that day', align: 'right', value: t => perDay.get(`${t.workerId}|${t.date}`) ?? 1, render: t => { const n = perDay.get(`${t.workerId}|${t.date}`) ?? 1; return n > 1 ? badge(String(n), 'warn') : '1'; } },
+        { key: 'shiftCode', label: 'Shift code' },
+        { key: 'timeIn', label: 'Clock in' }, { key: 'mealStart', label: 'Meal out', value: t => t.mealStart || '—' },
+        { key: 'mealEnd', label: 'Meal in', value: t => t.mealEnd || '—' }, { key: 'timeOut', label: 'Clock out' },
+        { key: 'entryType', label: 'Entry type' }, { key: 'enteredOn', label: 'Entered on' }, { key: 'payPeriod', label: 'Pay period' },
+        { key: 'state', label: 'State' },
+        { key: 'notes', label: 'Source note', render: t => h('span', { class: 'small' }, t.notes) },
+      ], { onRow: t => go('punches', t.workerId), csvName: 'time-cards-raw.csv', pageSize: 100 }))),
     card('Time exceptions and how they are handled', table(list.flatMap(t => exceptions(t).map(x => ({ worker: t.workerId, ...x }))), [
       { key: 'worker', label: 'Worker' }, { key: 'code', label: 'Exception' }, { key: 'msg', label: 'Handling' },
     ], { pageSize: 30, onRow: r => go('time', r.worker) })),
@@ -57,7 +60,7 @@ export function viewTime(arg?: string): HTMLElement {
   );
 }
 
-function traceCard(t: TimeResult): HTMLElement {
+export function traceCard(t: TimeResult): HTMLElement {
   const R = state.result;
   const w = R.model.workerById.get(t.workerId)!;
   return card(`Rule trace · ${displayName(t.workerId)} · ${t.workerId} (${t.group})`,

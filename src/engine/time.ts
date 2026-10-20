@@ -7,7 +7,7 @@
 //   4. CA 7th consecutive day in the workweek (1.5x first 8, 2x after)
 //   5. weekly OT (>40) on remaining straight hours  — no hour counted twice
 //   6. differentials (night $3.00 22:00–06:00, else NGHT $2.50 / WKND $1.00; no stacking)
-//   7. meal penalties (CA; missed per attestation, or late after hour 5; max 1/day)
+//   7. meal penalties (CA; missed per attestation, late after hour 5, or no second meal on a shift over 12 hours; max 1/day)
 //   8. weighted weekly regular rate = (straight pay + differentials) / hours worked
 //   9. premiums: OT = hours x (base + 0.5 x RR); DT and 7th-day >8 = hours x (base + 1.0 x RR)
 
@@ -162,6 +162,14 @@ export function calcTimeForWorker(model: Model, w: Worker, ps: PaySchedule): Tim
           flags.push('Late meal – flagged only');
           issues.push({ workerId: w.id, code: 'MEAL_EXCEPTION_NONCA', severity: 'info', message: `${t.date}: meal started after hour 5; flagged only`, ref: t.date });
         }
+      }
+      // CA: a shift over 12 hours requires a second meal period, and it cannot be waived (Labor Code 512).
+      // Punches carry at most one meal, so any CA shift over 12 hours owes the premium (still max 1 per day).
+      if (mp && workedH > 12) {
+        if (!mealPenalty) {
+          mealPenalty = true;
+          flags.push('No second meal on a shift over 12 hours – penalty (cannot be waived)');
+        } else flags.push('No second meal on a shift over 12 hours (premium already owed today; max 1 per day)');
       }
     }
     if (dc.workedMin > 0 && hm(t.timeOut) <= hm(t.timeIn)) flags.push('Crosses midnight – credited to start date');

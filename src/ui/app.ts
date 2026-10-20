@@ -12,7 +12,7 @@ import { logo, icon } from './brand.ts';
 import { viewExport, viewMapping } from './views-prism.ts';
 import { setRefresh } from './router.ts';
 
-export interface Route { id: string; label: string; group: string; render: (arg?: string) => HTMLElement }
+export interface Route { id: string; label: string; group: string; render: (arg?: string) => HTMLElement; hidden?: boolean }
 
 export const ROUTES: Route[] = [
   { id: 'dashboard', label: 'Dashboard', group: 'Run', render: viewDashboard },
@@ -20,7 +20,10 @@ export const ROUTES: Route[] = [
   { id: 'register', label: 'Payroll register', group: 'US payroll', render: viewRegister },
   { id: 'results', label: 'Payroll results', group: 'US payroll', render: viewResults },
   { id: 'payslip', label: 'Payslip', group: 'US payroll', render: viewPayslip },
-  { id: 'time', label: 'Time results', group: 'US payroll', render: viewTime },
+  { id: 'timecards', label: 'Time cards', group: 'US payroll', render: viewTime },
+  // Time results now live under Payroll results (tab). Old #/time/<id> links still work.
+  { id: 'time', label: 'Time results', group: 'US payroll', render: (arg?: string) => viewResults(arg, 'timeres'), hidden: true },
+  { id: 'punches', label: 'Time cards (worker)', group: 'US payroll', render: (arg?: string) => viewResults(arg, 'cards'), hidden: true },
   { id: 'absence', label: 'Absence & payouts', group: 'All countries', render: viewAbsence },
   { id: 'intl', label: 'International', group: 'All countries', render: viewIntl },
   { id: 'audit', label: 'Pre-payroll audit (AI)', group: 'Close', render: viewAudit },
@@ -49,7 +52,7 @@ function parseHash(): [string, string | undefined] {
 function renderRoute() {
   const [id, arg] = parseHash();
   const route = ROUTES.find(r => r.id === id) ?? ROUTES[0];
-  for (const a of nav.querySelectorAll('a')) a.classList.toggle('active', a.getAttribute('data-id') === route.id);
+  for (const a of nav.querySelectorAll('a')) a.classList.toggle('active', a.getAttribute('data-id') === (route.hidden ? 'results' : route.id));
   clear(main);
   try {
     main.append(route.render(arg));
@@ -95,8 +98,8 @@ async function boot() {
   clear(root);
   nav = h('nav', { class: 'sidebar' },
     h('div', { class: 'brand' }, logo(34), h('div', null, h('div', { class: 'brand-name' }, 'NeoCloud'), h('div', { class: 'brand-sub' }, 'Payroll · Oct 2026'))),
-    ...[...new Set(ROUTES.map(r => r.group))].map(g => h('div', { class: 'nav-group' }, h('div', { class: 'nav-title' }, g),
-      ROUTES.filter(r => r.group === g).map(r => h('a', { href: `#/${r.id}`, 'data-id': r.id }, icon(r.id), h('span', null, r.label))))),
+    ...[...new Set(ROUTES.filter(r => !r.hidden).map(r => r.group))].map(g => h('div', { class: 'nav-group' }, h('div', { class: 'nav-title' }, g),
+      ROUTES.filter(r => r.group === g && !r.hidden).map(r => h('a', { href: `#/${r.id}`, 'data-id': r.id }, icon(r.id), h('span', null, r.label))))),
     h('div', { class: 'nav-foot muted' }, 'Synthetic data · calculations run in your browser'),
   );
   topbar = h('header', { class: 'topbar' });

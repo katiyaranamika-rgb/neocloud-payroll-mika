@@ -116,7 +116,16 @@ export function table<T>(rows: T[], cols: Col<T>[], opts: { pageSize?: number; c
       });
     }
     const tools = h('div', { class: 'table-tools' },
-      opts.search !== false ? h('input', { type: 'search', placeholder: 'Search…', value: q, onInput: (e: Event) => { q = (e.target as HTMLInputElement).value; render(); (wrap.querySelector('input[type=search]') as HTMLInputElement)?.focus(); } }) : null,
+      opts.search !== false ? h('input', { type: 'search', placeholder: 'Search…', value: q, onInput: (e: Event) => {
+        // The table re-renders on every keystroke, which replaces this input. Put focus AND the caret
+        // back where they were; without restoring the caret, browsers place it at the start and text types backwards.
+        const el = e.target as HTMLInputElement;
+        q = el.value;
+        const pos = el.selectionStart ?? q.length;
+        render();
+        const next = wrap.querySelector('input[type=search]') as HTMLInputElement | null;
+        if (next) { next.focus(); next.setSelectionRange(pos, pos); }
+      } }) : null,
       h('span', { class: 'muted' }, `${data.length.toLocaleString()} row${data.length === 1 ? '' : 's'}`),
       opts.csvName ? h('button', { class: 'btn ghost sm', onClick: () => {
         const head = cols.map(c => csvEscape(c.label)).join(',');
