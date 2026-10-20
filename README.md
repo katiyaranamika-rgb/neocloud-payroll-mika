@@ -2,7 +2,7 @@
 
 A web app that runs one pay period of payroll, time and absence for NeoCloud (375 employees, 30 contractors, 5 pay groups). It calculates US payroll, ingests and reconciles the international vendor registers, reconciles headcount and the legacy Rippling register, and produces a validated NetSuite journal.
 
-- **Live app:** `https://<your-project>.vercel.app` (replace after deploying)
+- **Live app:** `https://neocloud-payroll-mika.vercel.app/` 
 - **Architecture decisions:** [docs/ARCHITECTURE_DECISIONS.md](docs/ARCHITECTURE_DECISIONS.md)
 - **Design document and reconciliation memo:** submitted separately (PDF)
 
