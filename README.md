@@ -134,7 +134,7 @@ source/       the workbooks provided with the exercise
 
 The repo deploys as-is: `vercel.json` sets the build command (`npm run build`), the output directory (`dist`) and no install step; `package.json` pins Node ≥ 22.18. `api/explain.js` becomes a serverless function. Optionally add `ANTHROPIC_API_KEY` under **Project → Settings → Environment Variables** to enable live AI commentary.
 
-## AI in payroll operations (bonus, requirement 9)
+## AI in payroll operations for audits
 
 **One feature, in depth: the pre-payroll audit.** Before a US pay run is approved, the Payroll Specialist needs to know two things: are the right people being paid, and is anything unusual about what they are paid.
 
