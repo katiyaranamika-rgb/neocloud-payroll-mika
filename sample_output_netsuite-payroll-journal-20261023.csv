@@ -1,0 +1,20 @@
+journal_id,company,subsidiary,currency,date,account,account_name,debit,credit,department,location,class,memo,fx_rate_to_usd,debit_usd,credit_usd
+JE-NC-UK-PAYROLL-20261023,NC-UK,NeoCloud UK Ltd,GBP,2026-10-23,2143,Employer benefits accrued,,25272.52,,,,NC-UK payroll 2026-10-01 to 2026-10-31,1.27,,32096.1
+JE-NC-UK-PAYROLL-20261023,NC-UK,NeoCloud UK Ltd,GBP,2026-10-23,2160,International statutory payable,,123261.44,,,,NC-UK payroll 2026-10-01 to 2026-10-31,1.27,,156542.03
+JE-NC-UK-PAYROLL-20261023,NC-UK,NeoCloud UK Ltd,GBP,2026-10-23,2170,International provider clearing,,161097.25,,,,NC-UK payroll 2026-10-01 to 2026-10-31,1.27,,204593.51
+JE-NC-UK-PAYROLL-20261023,NC-UK,NeoCloud UK Ltd,GBP,2026-10-23,2190,Accrued leave liability,4740.38,,,,,NC-UK payroll 2026-10-01 to 2026-10-31,1.27,6020.28,
+JE-NC-UK-PAYROLL-20261023,NC-UK,NeoCloud UK Ltd,GBP,2026-10-23,6100,Salaries - regular,79651.52,,100 Engineering,London,UK Monthly,NC-UK payroll 2026-10-01 to 2026-10-31,1.27,101157.43,
+JE-NC-UK-PAYROLL-20261023,NC-UK,NeoCloud UK Ltd,GBP,2026-10-23,6100,Salaries - regular,90666.66,,200 GPU Cloud,London,UK Monthly,NC-UK payroll 2026-10-01 to 2026-10-31,1.27,115146.66,
+JE-NC-UK-PAYROLL-20261023,NC-UK,NeoCloud UK Ltd,GBP,2026-10-23,6100,Salaries - regular,7083.33,,300 On-Prem,London,UK Monthly,NC-UK payroll 2026-10-01 to 2026-10-31,1.27,8995.83,
+JE-NC-UK-PAYROLL-20261023,NC-UK,NeoCloud UK Ltd,GBP,2026-10-23,6100,Salaries - regular,59333.33,,400 G&A,London,UK Monthly,NC-UK payroll 2026-10-01 to 2026-10-31,1.27,75353.33,
+JE-NC-UK-PAYROLL-20261023,NC-UK,NeoCloud UK Ltd,GBP,2026-10-23,6140,Bonuses,8500,,100 Engineering,London,UK Monthly,NC-UK payroll 2026-10-01 to 2026-10-31,1.27,10795,
+JE-NC-UK-PAYROLL-20261023,NC-UK,NeoCloud UK Ltd,GBP,2026-10-23,6140,Bonuses,1750,,200 GPU Cloud,London,UK Monthly,NC-UK payroll 2026-10-01 to 2026-10-31,1.27,2222.5,
+JE-NC-UK-PAYROLL-20261023,NC-UK,NeoCloud UK Ltd,GBP,2026-10-23,6140,Bonuses,1000,,400 G&A,London,UK Monthly,NC-UK payroll 2026-10-01 to 2026-10-31,1.27,1270,
+JE-NC-UK-PAYROLL-20261023,NC-UK,NeoCloud UK Ltd,GBP,2026-10-23,6220,Employer social charges - international,10909.7,,100 Engineering,London,UK Monthly,NC-UK payroll 2026-10-01 to 2026-10-31,1.27,13855.32,
+JE-NC-UK-PAYROLL-20261023,NC-UK,NeoCloud UK Ltd,GBP,2026-10-23,6220,Employer social charges - international,11602.9,,200 GPU Cloud,London,UK Monthly,NC-UK payroll 2026-10-01 to 2026-10-31,1.27,14735.68,
+JE-NC-UK-PAYROLL-20261023,NC-UK,NeoCloud UK Ltd,GBP,2026-10-23,6220,Employer social charges - international,1527.07,,300 On-Prem,London,UK Monthly,NC-UK payroll 2026-10-01 to 2026-10-31,1.27,1939.38,
+JE-NC-UK-PAYROLL-20261023,NC-UK,NeoCloud UK Ltd,GBP,2026-10-23,6220,Employer social charges - international,7593.8,,400 G&A,London,UK Monthly,NC-UK payroll 2026-10-01 to 2026-10-31,1.27,9644.13,
+JE-NC-UK-PAYROLL-20261023,NC-UK,NeoCloud UK Ltd,GBP,2026-10-23,6240,Employer benefits,8815.16,,100 Engineering,London,UK Monthly,NC-UK payroll 2026-10-01 to 2026-10-31,1.27,11195.25,
+JE-NC-UK-PAYROLL-20261023,NC-UK,NeoCloud UK Ltd,GBP,2026-10-23,6240,Employer benefits,9241.66,,200 GPU Cloud,London,UK Monthly,NC-UK payroll 2026-10-01 to 2026-10-31,1.27,11736.91,
+JE-NC-UK-PAYROLL-20261023,NC-UK,NeoCloud UK Ltd,GBP,2026-10-23,6240,Employer benefits,1182.37,,300 On-Prem,London,UK Monthly,NC-UK payroll 2026-10-01 to 2026-10-31,1.27,1501.61,
+JE-NC-UK-PAYROLL-20261023,NC-UK,NeoCloud UK Ltd,GBP,2026-10-23,6240,Employer benefits,6033.33,,400 G&A,London,UK Monthly,NC-UK payroll 2026-10-01 to 2026-10-31,1.27,7662.33,
